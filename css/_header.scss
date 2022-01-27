@@ -17,6 +17,7 @@ header {
     left: calc(50% - 25vw);
     box-shadow: $box-shadow-config2;
     backdrop-filter: blur(10px);
+    z-index: 20;
 
     .title {
         color: $white-color;

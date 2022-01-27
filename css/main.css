@@ -15,6 +15,7 @@ header {
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
+  z-index: 20;
 }
 
 header .title {
@@ -35,6 +36,178 @@ header svg {
           order: -1;
 }
 
+.modal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 2em;
+  position: relative;
+}
+
+.modal-container svg {
+  fill: #AB93C9;
+  width: 30px;
+  padding: .5em;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  position: absolute;
+  left: -15em;
+  top: 0;
+}
+
+.modal-container .top-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .8em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  background: rgba(214, 152, 185, 0.5);
+  padding: 2em;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.modal-container .top-container .title, .modal-container .top-container .calc-description {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.modal-container .top-container .calc-description {
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+
+.modal-container .base-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 2em;
+}
+
+.modal-container .base-container label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5em;
+  font-weight: 500;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.modal-container .base-container label input, .modal-container .base-container label div {
+  width: 20em;
+  height: 1.5em;
+  padding: .2em .5em;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-container .base-container label div {
+  line-height: 1.5rem;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@-webkit-keyframes openView {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10em);
+            transform: translateY(10em);
+  }
+}
+
+@keyframes openView {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10em);
+            transform: translateY(10em);
+  }
+}
+
+@-webkit-keyframes onOpenViewScreen {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10em);
+            transform: translateY(10em);
+  }
+}
+
+@keyframes onOpenViewScreen {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(10em);
+            transform: translateY(10em);
+  }
+}
+
+@-webkit-keyframes closeView {
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(10em);
+            transform: translateY(10em);
+  }
+}
+
+@keyframes closeView {
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(10em);
+            transform: translateY(10em);
+  }
+}
+
+@-webkit-keyframes onCloseViewScreen {
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(10em);
+            transform: translateY(10em);
+  }
+}
+
+@keyframes onCloseViewScreen {
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(10em);
+            transform: translateY(10em);
+  }
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -43,6 +216,23 @@ body {
   font-family: Montserrat;
   background: url("../images/img-backgound3.jpg") no-repeat;
   background-size: cover;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  background: rgba(237, 161, 171, 0.5);
+  width: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(171, 147, 201, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(171, 147, 201, 0.5);
 }
 
 main {
@@ -117,6 +307,10 @@ main .aside-container aside div:hover {
 main .aside-container aside div span {
   font-weight: 500;
   margin-left: 2.5em;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 main .aside-container aside div svg {
@@ -143,7 +337,6 @@ main .app-container {
   position: absolute;
   top: 5em;
   left: 12.5em;
-  gap: 1.5em;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(10px);
@@ -183,7 +376,21 @@ main .app-container .search-container label input {
   margin-left: 2em;
 }
 
-main .app-container .cards-screen {
+main .app-container .screens-container {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main .app-container .screens-container .cards-screen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -195,10 +402,11 @@ main .app-container .cards-screen {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  padding: 2em;
+  padding: 0 2em;
 }
 
-main .app-container .cards-screen .cards-container {
+main .app-container .screens-container .cards-screen .cards-container {
+  width: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,7 +423,7 @@ main .app-container .cards-screen .cards-container {
   padding: .7em;
 }
 
-main .app-container .cards-screen .cards-container:hover {
+main .app-container .screens-container .cards-screen .cards-container:hover {
   -webkit-transform: translateY(-0.2em);
           transform: translateY(-0.2em);
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
@@ -224,7 +432,7 @@ main .app-container .cards-screen .cards-container:hover {
   transition: .1s ease-out;
 }
 
-main .app-container .cards-screen .cards-container .card {
+main .app-container .screens-container .cards-screen .cards-container .card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,7 +446,7 @@ main .app-container .cards-screen .cards-container .card {
   gap: .5em;
 }
 
-main .app-container .cards-screen .cards-container .card div {
+main .app-container .screens-container .cards-screen .cards-container .card div {
   width: 50px;
   height: 50px;
   display: -webkit-box;
@@ -252,13 +460,13 @@ main .app-container .cards-screen .cards-container .card div {
   margin: 0 auto;
 }
 
-main .app-container .cards-screen .cards-container .card div svg {
+main .app-container .screens-container .cards-screen .cards-container .card div svg {
   width: 20px;
   fill: #AB93C9;
   margin: 0 auto;
 }
 
-main .app-container .cards-screen .cards-container .card span {
+main .app-container .screens-container .cards-screen .cards-container .card span {
   font-weight: 500;
   line-height: 2em;
   color: #fff;
@@ -266,5 +474,22 @@ main .app-container .cards-screen .cards-container .card span {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+}
+
+main .app-container .screens-container .view-screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 2em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0 2em;
+  -webkit-animation: openView 500ms ease-out forwards;
+          animation: openView 500ms ease-out forwards;
 }
 /*# sourceMappingURL=main.css.map */
