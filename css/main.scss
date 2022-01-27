@@ -1,5 +1,4 @@
 @import './header';
-@import './screens';
 @import './footer';
 
 $primary-color: #AB93C9;
@@ -172,26 +171,27 @@ main {
         .screens-container {
             width: inherit;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             flex-direction: row;
             
             .cards-screen {
+                width: inherit;
                 display: flex;
-                justify-content: space-evenly;
+                justify-content: flex-start;
                 gap: 2em;
                 flex-flow: row wrap;
                 padding: 0 2em;
-                
     
                 .cards-container {
                     width: inherit;
                     display: flex;
-                    justify-content: center;
+                    justify-content: flex-start;
                     flex-direction: column;
                     width: 5em;
                     background-color: rgba($warm-color1, .8);
                     border-radius: 10px;
                     padding: .7em;
+                    gap: 2em;
                     
                     &:hover {
                         transform: translateY(-.2em);
@@ -224,29 +224,118 @@ main {
                         }
         
                         span {
-                            font-weight: 500;
-                            line-height: 2em;
+                            font-weight: 400;
+                            font-size: .9rem;
+                            line-height: 1.2rem;
                             color: $white-color;
                             user-select: none;
+                            text-align: center;
                         }
                         
                     }
                 }
+
+                .hide-cards {
+                    display: none;
+                    position: absolute;
+                }
             }
 
             .view-screen {
+                width: inherit;
                 display: flex;
-                justify-content: space-evenly;
-                gap: 2em;
+                justify-content: flex-start;
                 flex-flow: row wrap;
                 padding: 0 2em;
 
                 animation: openView 500ms ease-out forwards;
+
+                .modal-container {
+                    display: flex;
+                    justify-content: center;
+                    flex-flow: column wrap;
+                    gap: 2em;
+                    position: relative;
+                    margin-left: -59em;
+                
+                    svg {
+                        fill: $primary-color;
+                        width: 30px;
+                        padding: .5em;
+                        background: rgba($white-color, .2);
+                        border-radius: 5px;
+                        position: absolute;
+                        left: -10em;
+                        top: 0;
+
+                        &:hover {
+                            fill: rgba(#000, .5);
+                            transition: .2s ease;
+                        }
+                    }
+                
+                    .top-container {
+                        display: flex;
+                        justify-content: center;
+                        gap: .8em;
+                        flex-direction: column;
+                        margin: 0 auto;
+                        background: rgba($secundary-color,.5);
+                        padding: 2em;
+                        border-radius: 10px;
+                        user-select: none;
+                        
+                        .title, .calc-description {
+                            font-size: 2rem;
+                            font-weight: 500;
+                        }
+                
+                        .calc-description {
+                            font-size: 1.2rem;
+                            margin: 0 auto;
+                        }
+                    }
+                
+                    .base-container {
+                        display: flex;
+                        justify-content: center;
+                        flex-flow: column wrap;
+                        gap: 2em;
+                
+                        label {
+                            display: flex;
+                            justify-content: flex-start;
+                            flex-direction: column;
+                            gap: .5em;
+                            font-weight: 500;
+                            color: $white-color;
+                            user-select: none;
+                            
+                            input, div {
+                                width: 20em;
+                                height: 1.5em;
+                                padding: .2em .5em;
+                                border: none;
+                                border-radius: 5px;
+                                outline: none;
+                                background-color: rgba($white-color, .2);
+                            }
+                            
+                            div {
+                                line-height: 1.5rem;
+                                height: auto;
+                                background-color: rgba(#000, .2);
+                            }
+                        }
+                    }
+                }
+
+
+                .hide-items {
+                    display: none;
+                    position: absolute;
+                }
             }
         }
-
-        
-        
     }
-    
 }

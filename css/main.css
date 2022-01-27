@@ -36,114 +36,6 @@ header svg {
           order: -1;
 }
 
-.modal-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  gap: 2em;
-  position: relative;
-}
-
-.modal-container svg {
-  fill: #AB93C9;
-  width: 30px;
-  padding: .5em;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  position: absolute;
-  left: -15em;
-  top: 0;
-}
-
-.modal-container .top-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: .8em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 auto;
-  background: rgba(214, 152, 185, 0.5);
-  padding: 2em;
-  border-radius: 10px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.modal-container .top-container .title, .modal-container .top-container .calc-description {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.modal-container .top-container .calc-description {
-  font-size: 1.2rem;
-  margin: 0 auto;
-}
-
-.modal-container .base-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  gap: 2em;
-}
-
-.modal-container .base-container label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: .5em;
-  font-weight: 500;
-  color: #fff;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-.modal-container .base-container label input, .modal-container .base-container label div {
-  width: 20em;
-  height: 1.5em;
-  padding: .2em .5em;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.modal-container .base-container label div {
-  line-height: 1.5rem;
-  height: auto;
-  background-color: rgba(0, 0, 0, 0.2);
-}
-
 @-webkit-keyframes openView {
   from {
     opacity: 0;
@@ -381,9 +273,9 @@ main .app-container .screens-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -391,12 +283,13 @@ main .app-container .screens-container {
 }
 
 main .app-container .screens-container .cards-screen {
+  width: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   gap: 2em;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -410,9 +303,9 @@ main .app-container .screens-container .cards-screen .cards-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -421,6 +314,7 @@ main .app-container .screens-container .cards-screen .cards-container {
   background-color: rgba(237, 161, 171, 0.8);
   border-radius: 10px;
   padding: .7em;
+  gap: 2em;
 }
 
 main .app-container .screens-container .cards-screen .cards-container:hover {
@@ -467,23 +361,30 @@ main .app-container .screens-container .cards-screen .cards-container .card div 
 }
 
 main .app-container .screens-container .cards-screen .cards-container .card span {
-  font-weight: 500;
-  line-height: 2em;
+  font-weight: 400;
+  font-size: .9rem;
+  line-height: 1.2rem;
   color: #fff;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  text-align: center;
+}
+
+main .app-container .screens-container .cards-screen .hide-cards {
+  display: none;
+  position: absolute;
 }
 
 main .app-container .screens-container .view-screen {
+  width: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  gap: 2em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -491,5 +392,125 @@ main .app-container .screens-container .view-screen {
   padding: 0 2em;
   -webkit-animation: openView 500ms ease-out forwards;
           animation: openView 500ms ease-out forwards;
+}
+
+main .app-container .screens-container .view-screen .modal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 2em;
+  position: relative;
+  margin-left: -59em;
+}
+
+main .app-container .screens-container .view-screen .modal-container svg {
+  fill: #AB93C9;
+  width: 30px;
+  padding: .5em;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  position: absolute;
+  left: -10em;
+  top: 0;
+}
+
+main .app-container .screens-container .view-screen .modal-container svg:hover {
+  fill: rgba(0, 0, 0, 0.5);
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+main .app-container .screens-container .view-screen .modal-container .top-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .8em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  background: rgba(214, 152, 185, 0.5);
+  padding: 2em;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .app-container .screens-container .view-screen .modal-container .top-container .title, main .app-container .screens-container .view-screen .modal-container .top-container .calc-description {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+main .app-container .screens-container .view-screen .modal-container .top-container .calc-description {
+  font-size: 1.2rem;
+  margin: 0 auto;
+}
+
+main .app-container .screens-container .view-screen .modal-container .base-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 2em;
+}
+
+main .app-container .screens-container .view-screen .modal-container .base-container label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5em;
+  font-weight: 500;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .app-container .screens-container .view-screen .modal-container .base-container label input, main .app-container .screens-container .view-screen .modal-container .base-container label div {
+  width: 20em;
+  height: 1.5em;
+  padding: .2em .5em;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+main .app-container .screens-container .view-screen .modal-container .base-container label div {
+  line-height: 1.5rem;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+main .app-container .screens-container .view-screen .hide-items {
+  display: none;
+  position: absolute;
 }
 /*# sourceMappingURL=main.css.map */
