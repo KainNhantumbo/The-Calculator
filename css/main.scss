@@ -244,8 +244,7 @@ main {
             .view-screen {
                 width: inherit;
                 display: flex;
-                justify-content: flex-start;
-                flex-flow: row wrap;
+                justify-content: center;
                 padding: 0 2em;
 
                 animation: openView 500ms ease-out forwards;
@@ -254,9 +253,9 @@ main {
                     display: flex;
                     justify-content: center;
                     flex-flow: column wrap;
-                    gap: 2em;
+                    gap: 1.2em;
                     position: relative;
-                    margin-left: -59em;
+                    margin: 0 auto;
                 
                     svg {
                         fill: $primary-color;
@@ -329,8 +328,6 @@ main {
                         }
                     }
                 }
-
-
                 .hide-items {
                     display: none;
                     position: absolute;

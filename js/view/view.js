@@ -5,8 +5,15 @@ export function openView () {
     
     cardBtn.addEventListener('click', () => {
         document.querySelector('.cards-screen').classList.toggle('hide-cards');
-        document.querySelectorAll('.cards-container').forEach(item => item.classList.toggle('hide-cards'));
-        document.querySelector('.view-screen').classList.toggle('hide-items');
+        // document.querySelectorAll('.cards-container').forEach(item => item.classList.toggle('hide-cards'));
+        // document.querySelector('.view-screen').classList.toggle('hide-items');
+        const temp =  document.querySelector('.modal-container');
+        
+        if (temp.hasAttribute('style')){
+            temp.removeAttribute('style');
+        } else {
+            temp.setAttribute('style', 'display: none');
+        }
         document.querySelector('.modal-container').classList.toggle('hide-items');
         log('me clicou')
     });
