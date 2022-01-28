@@ -171,8 +171,25 @@ main {
         .screens-container {
             width: inherit;
             display: flex;
-            justify-content: center;
             flex-direction: row;
+            position: relative;
+
+            #backBtn {
+                fill: $primary-color;
+                width: 30px;
+                padding: .5em;
+                background: rgba($white-color, .2);
+                border-radius: 0 5px 5px 0;
+                position: absolute;
+                left: 0em;
+                top: 0;
+                z-index: 5;
+
+                &:hover {
+                    fill: rgba(#000, .5);
+                    transition: .2s ease;
+                }
+            }
             
             .cards-screen {
                 width: inherit;
@@ -199,7 +216,6 @@ main {
                         transition: .1s ease-out;
                     }
                     
-        
                     .card {
                         display: flex;
                         justify-content: center;
@@ -256,23 +272,7 @@ main {
                     gap: 1.2em;
                     position: relative;
                     margin: 0 auto;
-                
-                    svg {
-                        fill: $primary-color;
-                        width: 30px;
-                        padding: .5em;
-                        background: rgba($white-color, .2);
-                        border-radius: 5px;
-                        position: absolute;
-                        left: -10em;
-                        top: 0;
 
-                        &:hover {
-                            fill: rgba(#000, .5);
-                            transition: .2s ease;
-                        }
-                    }
-                
                     .top-container {
                         display: flex;
                         justify-content: center;
@@ -327,10 +327,6 @@ main {
                             }
                         }
                     }
-                }
-                .hide-items {
-                    display: none;
-                    position: absolute;
                 }
             }
         }

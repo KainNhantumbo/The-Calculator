@@ -277,13 +277,29 @@ main .app-container .screens-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  position: relative;
+}
+
+main .app-container .screens-container #backBtn {
+  fill: #AB93C9;
+  width: 30px;
+  padding: .5em;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0 5px 5px 0;
+  position: absolute;
+  left: 0em;
+  top: 0;
+  z-index: 5;
+}
+
+main .app-container .screens-container #backBtn:hover {
+  fill: rgba(0, 0, 0, 0.5);
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
 }
 
 main .app-container .screens-container .cards-screen {
@@ -410,23 +426,6 @@ main .app-container .screens-container .view-screen .modal-container {
   margin: 0 auto;
 }
 
-main .app-container .screens-container .view-screen .modal-container svg {
-  fill: #AB93C9;
-  width: 30px;
-  padding: .5em;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  position: absolute;
-  left: -10em;
-  top: 0;
-}
-
-main .app-container .screens-container .view-screen .modal-container svg:hover {
-  fill: rgba(0, 0, 0, 0.5);
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
-}
-
 main .app-container .screens-container .view-screen .modal-container .top-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -507,10 +506,5 @@ main .app-container .screens-container .view-screen .modal-container .base-conta
   line-height: 1.5rem;
   height: auto;
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-main .app-container .screens-container .view-screen .hide-items {
-  display: none;
-  position: absolute;
 }
 /*# sourceMappingURL=main.css.map */

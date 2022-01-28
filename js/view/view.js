@@ -1,32 +1,23 @@
-import { log } from "../modules/functions.js";
-
-export function openView () {
-    const cardBtn = document.getElementById('eq-linear');
+export function openTabById (id) {
+    const cardsTab = document.querySelector('.cards-screen');
+    const viewContainer = document.querySelector('.view-screen');
+    const backBtn = document.getElementById('backBtn');
+    const tab = document.getElementById(id);
     
-    cardBtn.addEventListener('click', () => {
-        document.querySelector('.cards-screen').classList.toggle('hide-cards');
-        // document.querySelectorAll('.cards-container').forEach(item => item.classList.toggle('hide-cards'));
-        // document.querySelector('.view-screen').classList.toggle('hide-items');
-        const temp =  document.querySelector('.modal-container');
-        
-        if (temp.hasAttribute('style')){
-            temp.removeAttribute('style');
-        } else {
-            temp.setAttribute('style', 'display: none');
-        }
-        document.querySelector('.modal-container').classList.toggle('hide-items');
-        log('me clicou')
-    });
+    cardsTab.setAttribute('style', 'display: none;');
+    viewContainer.removeAttribute('style');
+    backBtn.removeAttribute('style');
+    tab.removeAttribute('style');
 }
 
-export function closeView () {
+export function closeTab () {
+    const cardsTab = document.querySelector('.cards-screen');
+    const tabs = document.querySelectorAll('.modal-container');
+    const viewContainer = document.querySelector('.view-screen');
     const backBtn = document.getElementById('backBtn');
 
-    backBtn.addEventListener('click', () => {
-        document.querySelector('.cards-screen').classList.toggle('hide-cards');
-        document.querySelectorAll('.cards-container').forEach(item => item.classList.toggle('hide-cards'));
-        document.querySelector('.view-screen').classList.toggle('hide-items');
-        document.querySelector('.modal-container').classList.toggle('hide-items');
-        log('me clicou')
-    });
+    cardsTab.removeAttribute('style');
+    backBtn.setAttribute('style', 'display: none;');
+    tabs.forEach(tab => tab.setAttribute('style', 'display: none;'));
+    viewContainer.setAttribute('style', 'display: none;');
 }
