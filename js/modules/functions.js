@@ -1,18 +1,18 @@
 
-/* 
-async function calcEqLinear () {
-    try {
-        const a = await document.getElementById('input-a').value;
-        const b = await document.getElementById('input-b').value;
-        const result = document.getElementById('result');
-        const x = 0;
 
-        x = ((-b)/a).toFixed(0);
+export async function calcEqLinear () {
+    try {
+        let a = await document.getElementById('input-a').value;
+        let b = await document.getElementById('input-b').value;
+        let result = document.getElementById('result');
+        let x = 0;
+
+        x = -b / a;
         return result.textContent = `x = ${x}`;
     } catch (err) {
         console.log(err);
     }
-} */
+}
 
 /* function calcEquQuadratic () {
     const a = 0;

@@ -1,5 +1,9 @@
+@import './libs/reset';
+@import './libs/normalize';
 @import './header';
+@import './animations';
 @import './footer';
+
 
 $primary-color: #AB93C9;
 $secundary-color: #D698B9;
@@ -8,33 +12,6 @@ $warm-color2: #FFBEA3;
 $white-color: #fff;
 $box-shadow-config: 0 0 5px 2px rgba(#DFDFDF,.5);
 $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
-
-@keyframes openView {
-    from {
-        opacity: 0;
-        transform: translateY(10em);
-    }
-}
-@keyframes onOpenViewScreen {
-    from {
-        opacity: 0;
-        transform: translateY(10em);
-    }
-}
-@keyframes closeView {
-    to {
-        opacity: 0;
-        transform: translateY(10em);
-    }
-}
-@keyframes onCloseViewScreen {
-    to {
-        opacity: 0;
-        transform: translateY(10em);
-    }
-}
-
-
 
 body {
     box-sizing: border-box;
@@ -131,13 +108,13 @@ main {
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
-        background: rgba($secundary-color, .5);
+        background: rgba($secundary-color, .8);
         border-radius: 10px;
         position: absolute;
         top: 5em;
         left: 12.5em;
         box-shadow: $box-shadow-config2;
-        backdrop-filter: blur(10px);
+        // backdrop-filter: blur(10px);
 
         .search-container {
             display: flex;
@@ -211,9 +188,9 @@ main {
                     gap: 2em;
                     
                     &:hover {
-                        transform: translateY(-.2em);
+                        transform: scale(1.07, 1.07);
                         box-shadow: $box-shadow-config2;
-                        transition: .1s ease-out;
+                        transition: .15s ease-out;
                     }
                     
                     .card {
@@ -250,11 +227,6 @@ main {
                         
                     }
                 }
-
-                .hide-cards {
-                    display: none;
-                    position: absolute;
-                }
             }
 
             .view-screen {
@@ -263,7 +235,7 @@ main {
                 justify-content: center;
                 padding: 0 2em;
 
-                animation: openView 500ms ease-out forwards;
+                animation: openTab 500ms ease-out forwards;
 
                 .modal-container {
                     display: flex;
