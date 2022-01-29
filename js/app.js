@@ -4,9 +4,19 @@ import { closeTab } from './view/view.js';
 import { calcEqLinear } from './modules/functions.js';
 import { calcEqQuadratica } from './modules/functions.js';
 import { calcPercents } from './modules/functions.js';
+import { calcMedia } from './modules/functions.js';
 
 function initializer () {
     document.getElementById('backBtn').addEventListener('click', e => closeTab());
+
+    // abre a aba de cálculo de média
+    document.getElementById('calc-media').addEventListener('click', e => openTabById('algebra-media'));
+    // adiciona eventos nos inputs 
+    document.getElementById('algebra-media').addEventListener('keyup', e => {
+        const event = e.target.tagName;
+        if (event === 'INPUT')
+        return calcPercents();
+    });
 
     // abre a aba de cálculo de porcentagens
     document.getElementById('calc-porcentagem').addEventListener('click', e => openTabById('algebra-porcentagem'));

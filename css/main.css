@@ -551,6 +551,9 @@ header svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: .5em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -599,6 +602,9 @@ header svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
@@ -802,7 +808,7 @@ main .aside-container aside div svg {
 
 main .app-container {
   width: 70vw;
-  height: 80vh;
+  height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -820,6 +826,8 @@ main .app-container {
   left: 12.5em;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 main .app-container .search-container {
@@ -906,18 +914,17 @@ main .app-container .screens-container .cards-screen .cards-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 5em;
+  width: 6em;
   background-color: rgba(237, 161, 171, 0.8);
   border-radius: 10px;
-  padding: .7em;
-  gap: 2em;
+  padding: 1em;
 }
 
 main .app-container .screens-container .cards-screen .cards-container:hover {
@@ -964,9 +971,11 @@ main .app-container .screens-container .cards-screen .cards-container .card div 
 }
 
 main .app-container .screens-container .cards-screen .cards-container .card span {
-  font-weight: 400;
-  font-size: .9rem;
+  max-width: 100%;
+  font-weight: 500;
+  font-size: 90%;
   line-height: 1.2rem;
+  text-align: center;
   color: #fff;
   -webkit-user-select: none;
      -moz-user-select: none;

@@ -104,7 +104,7 @@ main {
     
     .app-container {
         width: 70vw;
-        height: 80vh;
+        height: 85vh;
         display: flex;
         justify-content: flex-start;
         flex-direction: column;
@@ -114,7 +114,7 @@ main {
         top: 5em;
         left: 12.5em;
         box-shadow: $box-shadow-config2;
-        // backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
 
         .search-container {
             display: flex;
@@ -175,18 +175,18 @@ main {
                 gap: 2em;
                 flex-flow: row wrap;
                 padding: 0 2em;
+                
     
                 .cards-container {
                     width: inherit;
                     display: flex;
-                    justify-content: flex-start;
+                    justify-content: center;
                     flex-direction: column;
-                    width: 5em;
+                    width: 6em;
                     background-color: rgba($warm-color1, .8);
                     border-radius: 10px;
-                    padding: .7em;
-                    gap: 2em;
-                    
+                    padding: 1em;
+
                     &:hover {
                         transform: scale(1.07, 1.07);
                         box-shadow: $box-shadow-config2;
@@ -217,9 +217,11 @@ main {
                         }
         
                         span {
-                            font-weight: 400;
-                            font-size: .9rem;
+                            max-width: 100%;
+                            font-weight: 500;
+                            font-size: 90%;
                             line-height: 1.2rem;
+                            text-align: center;
                             color: $white-color;
                             user-select: none;
                             text-align: center;

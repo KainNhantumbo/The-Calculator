@@ -18,6 +18,9 @@ const errorHandler = (result) => {
             result;
         break;
     }
+    if (isNaN(result)){
+        result = 'Digite números válidos'
+    }
     
     return result;
 }
@@ -76,37 +79,40 @@ export async function calcEqQuadratica () {
 }
 
 // faz o calculo de percentagens
-export async function calcPercents () {
+export function calcPercents () {
     const option =  document.getElementById('percents').value;
-    const a = await document.getElementById('input-percentA').value;
-    const b = await document.getElementById('input-percentB').value;
+    const a = document.getElementById('input-percentA').value;
+    const b = document.getElementById('input-percentB').value;
     const result =  document.getElementById('result-percent');
 
-    try {
-        if (a && b !== '') {
-            switch (option) {
-                case 'desconto':
-                    const x = (a * b) / 100;
-                    const resolveX = errorHandler(x);
-                    const y = Math.abs(a - x);
-                    const resolveY = errorHandler(y);
-                    result.innerHTML = `
-                    Percentagem descontada: ${resolveX}<br>
-                    Desconto: ${resolveY}%
-                    `;
-                break;
-                case 'aumentar':
-                break;
-                case 'simples':
-                break;
-                default:
-                    return;
-                break;
-            }
+    if (a && b !== '') {
+        if (option === 'desconto') {
+            const x = (a * b) / 100;
+            const resolveX = errorHandler(x);
+            const y = Math.abs(a - x);
+            const resolveY = errorHandler(y);
+            return result.innerHTML = `
+            Valor a descontar: ${resolveX}<br>
+            Desconto: ${resolveY}%`;
+        } 
+        else if (option === 'aumentar') {
+            const x = (a * b) / 100;
+            const resolveX = errorHandler(x);
+            // const y = a + x;
+            // const resolveY = errorHandler(y);
+            return result.textContent= `
+            Valor a aumentar: ${resolveX}`;
         }
-    } catch (err) {
-        return console.log(err);
+        else if (option === 'simples') {
+            const x = ((a * b) / 100)*100;
+            const resolveX = errorHandler(x);
+            return result.textContent= `
+            Percentagem: ${resolveX}%`; 
+        }
+        return result;
     }
+}
 
-    
+export function calcMedia () {
+
 }

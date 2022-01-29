@@ -28,6 +28,7 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
     .top-container {
         display: flex;
         justify-content: center;
+        align-items: center;
         gap: .5em;
         flex-direction: column;
         margin: 0 auto;
@@ -68,6 +69,7 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
     .base-container {
         display: flex;
         justify-content: center;
+        align-items: center;
         flex-flow: column wrap;
         gap: 2em;
 
