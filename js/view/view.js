@@ -11,6 +11,7 @@ export function openTabById (id) {
         viewContainer.removeAttribute('style');
         backBtn.removeAttribute('style');
         tab.removeAttribute('style');
+        tab.classList.add('openTabAnimation');
     }, 300);
 }
 
@@ -27,6 +28,7 @@ export function closeTab () {
         viewContainer.classList.remove('closeTabAnimation');
         viewContainer.setAttribute('style', 'display: none;');
         cardsTab.removeAttribute('style');
+        cardsTab.classList.add('openCardsAnimation');
     }, 300);
 }
 

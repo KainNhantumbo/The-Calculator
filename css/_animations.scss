@@ -7,9 +7,13 @@
 
 @keyframes closeTab {
     to {
-        transform: scale(2, 2);
+        transform: scale(.5, .5);
         opacity: 0;
     }
+}
+
+.openTabAnimation {
+    animation: openTab 500ms ease-out forwards;
 }
 
 .closeTabAnimation {
@@ -18,6 +22,13 @@
 
 // =============================================
 
+@keyframes openCards {
+    from {
+        transform: scale(.5, .5);
+        opacity: 0;
+    }
+}
+
 @keyframes closeCards {
     to {
         transform: scale(.5, .5);
@@ -25,6 +36,9 @@
     }
 }
 
+.openCardsAnimation {
+    animation: openCards 300ms ease-out forwards;
+}
 .closeCardsAnimation {
     animation: closeCards 300ms ease-in forwards;
 }

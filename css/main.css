@@ -462,23 +462,44 @@ header svg {
 
 @-webkit-keyframes closeTab {
   to {
-    -webkit-transform: scale(2, 2);
-            transform: scale(2, 2);
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
     opacity: 0;
   }
 }
 
 @keyframes closeTab {
   to {
-    -webkit-transform: scale(2, 2);
-            transform: scale(2, 2);
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
     opacity: 0;
   }
+}
+
+.openTabAnimation {
+  -webkit-animation: openTab 500ms ease-out forwards;
+          animation: openTab 500ms ease-out forwards;
 }
 
 .closeTabAnimation {
   -webkit-animation: closeTab 300ms ease-in forwards;
           animation: closeTab 300ms ease-in forwards;
+}
+
+@-webkit-keyframes openCards {
+  from {
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes openCards {
+  from {
+    -webkit-transform: scale(0.5, 0.5);
+            transform: scale(0.5, 0.5);
+    opacity: 0;
+  }
 }
 
 @-webkit-keyframes closeCards {
@@ -495,6 +516,11 @@ header svg {
             transform: scale(0.5, 0.5);
     opacity: 0;
   }
+}
+
+.openCardsAnimation {
+  -webkit-animation: openCards 300ms ease-out forwards;
+          animation: openCards 300ms ease-out forwards;
 }
 
 .closeCardsAnimation {
@@ -797,8 +823,6 @@ main .app-container .screens-container .view-screen {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 2em;
-  -webkit-animation: openTab 500ms ease-out forwards;
-          animation: openTab 500ms ease-out forwards;
 }
 
 main .app-container .screens-container .view-screen .modal-container {
