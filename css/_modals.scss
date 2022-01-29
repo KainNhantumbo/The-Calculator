@@ -1,0 +1,108 @@
+$primary-color: #AB93C9;
+$secundary-color: #D698B9;
+$warm-color1: #EDA1AB;
+$warm-color2: #FFBEA3;
+$white-color: #fff;
+$darker-color: #000;
+$box-shadow-config: 0 0 5px 2px rgba(#DFDFDF,.5);
+$box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
+
+.container-modal {
+    width: 100vw;
+    height:100vh;
+    background: rgba(#000,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+.clipboard-modal {
+    width: 70%;
+    max-width: 40em;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+
+    border-radius: 10px;
+    background: rgba(#000,.2);
+    backdrop-filter: blur(10px);
+    box-shadow: $box-shadow-config2;
+    padding: 2em;
+    z-index: 51;
+
+    .modal-info {
+        width: 90%;
+        height: 25%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 0 auto;
+
+        color: $darker-color;
+        background: rgba($white-color, .8);
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 2px 5px .5px rgba($darker-color, .2);
+        border-radius: 5px 5px 0 0;
+        padding: .5em 1em;
+        font-weight: 500;
+        text-align: center;
+        font-size: 2rem;
+        gap: .5em;
+        z-index: 52;
+        
+
+        span {
+            font-size: 1rem;
+            line-height: 1.6rem;
+        }
+    }
+
+    .modal-content {
+        width: 95%;
+        height: 70%;
+        background: rgba($white-color, .5);
+        margin: 0 auto;
+        margin-bottom: .5em;
+        outline: none;
+        padding: 1em 1em;
+        border-radius: 0 0 5px 5px;
+        line-height: 1.6rem;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            background: rgba($white-color, .1);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgba($darker-color, .5);
+        }
+    }
+
+    .modal-actions {
+        display: flex;
+        justify-content: flex-start;
+        gap: .5em;
+
+        button {
+            padding: .5em 1em;
+            border: none;
+            border-radius: 5px;
+            background: rgba($warm-color2, .5);
+            color: $white-color;
+            font-weight: 500;
+            font-size: .9rem;
+            
+            &:hover {
+                background-color: rgba($primary-color, .2);
+                transition: all .2s ease;
+                transform: scale(.95, .95);
+                box-shadow: $box-shadow-config2;
+            }
+        }
+    }
+    
+}

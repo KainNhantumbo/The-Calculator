@@ -1,3 +1,4 @@
+// faz o tratamento de erros ou valores indeterminados no calculo
 const errorHandler = (result) => {
     switch (result) {
         case undefined:
@@ -12,19 +13,19 @@ const errorHandler = (result) => {
         case +Infinity:
             result = '+ &infin;';
             break;
-        case NaN:
-            result = 'Digite números válidos';
         default:
             result;
         break;
     }
+
     if (isNaN(result)){
-        result = 'Digite números válidos'
+        return result = 'Digite números válidos';
     }
     
     return result;
 }
 
+// faz o calculo de equações lineares
 export async function calcEqLinear () {
     try {
         let a = await document.getElementById('input-a').value;
@@ -41,6 +42,7 @@ export async function calcEqLinear () {
     }
 }
 
+// faz o calculo de equações quadráticas
 export async function calcEqQuadratica () {
     try {
         let a = await document.getElementById('input-a2').value;
@@ -113,6 +115,28 @@ export function calcPercents () {
     }
 }
 
+// faz o calculo da média aritmética, geométrica e harmónica
 export function calcMedia () {
+    const a =  document.getElementById('input-mediaA').value;
+    const b =  document.getElementById('input-mediaB').value;
 
+    if (a && b !== '') {
+        // cálculo da média aritmética
+        const resultAritmetica =  document.getElementById('result-mediaA');
+        const mediaAritmetica = parseFloat((a + b) / 2);
+        const resolvedAritmetica = errorHandler(mediaAritmetica);
+        resultAritmetica.textContent = resolvedAritmetica;
+
+        // cálculo da média geométrica
+        const resultGeometrica =  document.getElementById('result-mediaB');
+        const mediaGeometrica = parseFloat((Math.sqrt(a * b)).toFixed(2));
+        const resolvedGeometrica = errorHandler(mediaGeometrica);
+        resultGeometrica.textContent = resolvedGeometrica;
+
+        // cálculo da média harmónica
+        const resultHarmonica =  document.getElementById('result-mediaC');
+        const mediaHarmonica = parseFloat((2 / ((1/a) + (1/b))).toFixed(2));
+        const resolvedHarmonica = errorHandler(mediaHarmonica);
+        resultHarmonica.textContent = resolvedHarmonica;
+    }
 }

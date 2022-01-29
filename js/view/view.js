@@ -32,4 +32,14 @@ export function closeTab () {
     }, 300);
 }
 
+export function modal () {
+    document.querySelector('.container-modal').addEventListener('click', e => {
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        e.cancelBubble = true;
+        console.log(e.bubbles)
+        console.log('Clicoou')
+    })
+}
+
    
