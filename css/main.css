@@ -528,6 +528,151 @@ header svg {
           animation: closeCards 300ms ease-in forwards;
 }
 
+.modal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 1.2em;
+  position: relative;
+  margin: 0 auto;
+}
+
+.modal-container .top-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  background: rgba(214, 152, 185, 0.5);
+  padding: 1.6em 2em;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.modal-container .top-container .title, .modal-container .top-container .calc-description {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.modal-container .top-container .calc-description {
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.modal-container .base-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  gap: 2em;
+}
+
+.modal-container .base-container label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5em;
+  font-size: .9rem;
+  font-weight: 500;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.modal-container .base-container label input, .modal-container .base-container label div {
+  width: 20em;
+  height: 1.5em;
+  padding: .2em .5em;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.modal-container .base-container label div {
+  line-height: 1.5rem;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal-container #base-quadratica {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.modal-container #base-quadratica label input {
+  width: 15em;
+}
+
+.modal-container #base-quadratica .result-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: .5em;
+  font-size: .9rem;
+  font-weight: 500;
+  color: #fff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.modal-container #base-quadratica .result-container div {
+  width: 20em;
+  padding: .2em .5em;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  line-height: 1.5rem;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -823,103 +968,5 @@ main .app-container .screens-container .view-screen {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 2em;
-}
-
-main .app-container .screens-container .view-screen .modal-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  gap: 1.2em;
-  position: relative;
-  margin: 0 auto;
-}
-
-main .app-container .screens-container .view-screen .modal-container .top-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: .8em;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0 auto;
-  background: rgba(214, 152, 185, 0.5);
-  padding: 2em;
-  border-radius: 10px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-main .app-container .screens-container .view-screen .modal-container .top-container .title, main .app-container .screens-container .view-screen .modal-container .top-container .calc-description {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-main .app-container .screens-container .view-screen .modal-container .top-container .calc-description {
-  font-size: 1.2rem;
-  margin: 0 auto;
-}
-
-main .app-container .screens-container .view-screen .modal-container .base-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  gap: 2em;
-}
-
-main .app-container .screens-container .view-screen .modal-container .base-container label {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: .5em;
-  font-weight: 500;
-  color: #fff;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-
-main .app-container .screens-container .view-screen .modal-container .base-container label input, main .app-container .screens-container .view-screen .modal-container .base-container label div {
-  width: 20em;
-  height: 1.5em;
-  padding: .2em .5em;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-main .app-container .screens-container .view-screen .modal-container .base-container label div {
-  line-height: 1.5rem;
-  height: auto;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 /*# sourceMappingURL=main.css.map */

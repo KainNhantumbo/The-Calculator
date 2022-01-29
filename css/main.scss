@@ -2,6 +2,7 @@
 @import './libs/normalize';
 @import './header';
 @import './animations';
+@import './tabs';
 @import './footer';
 
 $primary-color: #AB93C9;
@@ -234,69 +235,7 @@ main {
                 justify-content: center;
                 padding: 0 2em;
 
-                .modal-container {
-                    display: flex;
-                    justify-content: center;
-                    flex-flow: column wrap;
-                    gap: 1.2em;
-                    position: relative;
-                    margin: 0 auto;
-
-                    .top-container {
-                        display: flex;
-                        justify-content: center;
-                        gap: .8em;
-                        flex-direction: column;
-                        margin: 0 auto;
-                        background: rgba($secundary-color,.5);
-                        padding: 2em;
-                        border-radius: 10px;
-                        user-select: none;
-                        
-                        .title, .calc-description {
-                            font-size: 2rem;
-                            font-weight: 500;
-                        }
-                
-                        .calc-description {
-                            font-size: 1.2rem;
-                            margin: 0 auto;
-                        }
-                    }
-                
-                    .base-container {
-                        display: flex;
-                        justify-content: center;
-                        flex-flow: column wrap;
-                        gap: 2em;
-                
-                        label {
-                            display: flex;
-                            justify-content: flex-start;
-                            flex-direction: column;
-                            gap: .5em;
-                            font-weight: 500;
-                            color: $white-color;
-                            user-select: none;
-                            
-                            input, div {
-                                width: 20em;
-                                height: 1.5em;
-                                padding: .2em .5em;
-                                border: none;
-                                border-radius: 5px;
-                                outline: none;
-                                background-color: rgba($white-color, .2);
-                            }
-                            
-                            div {
-                                line-height: 1.5rem;
-                                height: auto;
-                                background-color: rgba(#000, .2);
-                            }
-                        }
-                    }
-                }
+               
             }
         }
     }

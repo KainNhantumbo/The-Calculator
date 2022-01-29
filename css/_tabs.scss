@@ -1,0 +1,97 @@
+@mixin baseLABEL {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: .5em;
+    font-size: .9rem;
+    font-weight: 500;
+    color: $white-color;
+    user-select: none;
+}
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: 1.2em;
+    position: relative;
+    margin: 0 auto;
+
+    .top-container {
+        display: flex;
+        justify-content: center;
+        gap: .5em;
+        flex-direction: column;
+        margin: 0 auto;
+        background: rgba($secundary-color,.5);
+        padding: 1.6em 2em;
+        border-radius: 10px;
+        user-select: none;
+        
+        .title, .calc-description {
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+
+        .calc-description {
+            font-size: 1rem;
+            margin: 0 auto;
+        }
+    }
+
+    .base-container {
+        display: flex;
+        justify-content: center;
+        flex-flow: column wrap;
+        gap: 2em;
+
+        label {
+            @include baseLABEL();
+
+            input, div {
+                width: 20em;
+                height: 1.5em;
+                padding: .2em .5em;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                background-color: rgba($white-color, .2);
+            }
+            
+            div {
+                line-height: 1.5rem;
+                height: auto;
+                background-color: rgba(#000, .2);
+            }
+        }
+
+        
+    }
+
+    #base-quadratica {
+        justify-content: space-evenly;
+        flex-direction: row;
+
+        label input {
+            width: 15em;
+        }
+
+        .result-container {
+            @include baseLABEL();
+            
+            div {
+                width: 20em;
+                padding: .2em .5em;
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                line-height: 1.5rem;
+                height: auto;
+                background-color: rgba(#000, .2);
+            }
+        }
+
+        
+    }
+
+}
