@@ -576,6 +576,22 @@ header svg {
   margin: 0 auto;
 }
 
+.modal-container .top-container .calc-description select {
+  padding: .2em .5em;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.modal-container .top-container .calc-description select option {
+  background: rgba(171, 147, 201, 0.7);
+  line-height: 2rem;
+  font-weight: 500;
+}
+
 .modal-container .base-container {
   display: -webkit-box;
   display: -ms-flexbox;

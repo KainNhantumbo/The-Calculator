@@ -70,8 +70,43 @@ export async function calcEqQuadratica () {
                 `;
             }
         }
-        
     } catch (err) {
         return console.log(err);
     }
+}
+
+// faz o calculo de percentagens
+export async function calcPercents () {
+    const option =  document.getElementById('percents').value;
+    const a = await document.getElementById('input-percentA').value;
+    const b = await document.getElementById('input-percentB').value;
+    const result =  document.getElementById('result-percent');
+
+    try {
+        if (a && b !== '') {
+            switch (option) {
+                case 'desconto':
+                    const x = (a * b) / 100;
+                    const resolveX = errorHandler(x);
+                    const y = Math.abs(a - x);
+                    const resolveY = errorHandler(y);
+                    result.innerHTML = `
+                    Percentagem descontada: ${resolveX}<br>
+                    Desconto: ${resolveY}%
+                    `;
+                break;
+                case 'aumentar':
+                break;
+                case 'simples':
+                break;
+                default:
+                    return;
+                break;
+            }
+        }
+    } catch (err) {
+        return console.log(err);
+    }
+
+    
 }

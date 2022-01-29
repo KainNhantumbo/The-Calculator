@@ -1,3 +1,11 @@
+$primary-color: #AB93C9;
+$secundary-color: #D698B9;
+$warm-color1: #EDA1AB;
+$warm-color2: #FFBEA3;
+$white-color: #fff;
+$box-shadow-config: 0 0 5px 2px rgba(#DFDFDF,.5);
+$box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
+
 @mixin baseLABEL {
     display: flex;
     justify-content: flex-start;
@@ -36,8 +44,26 @@
         .calc-description {
             font-size: 1rem;
             margin: 0 auto;
+
+            select {
+                padding: .2em .5em;
+                border: none;
+                border-radius: 10px;
+                font-weight: 500;
+                color: $white-color;
+                background: rgba($white-color, .2);
+                outline: none;
+
+                option {
+                    background: rgba($primary-color, .7);
+                    line-height: 2rem;
+                    font-weight: 500;
+                }
+            }
+            
         }
     }
+
 
     .base-container {
         display: flex;
@@ -89,9 +115,9 @@
                 height: auto;
                 background-color: rgba(#000, .2);
             }
-        }
-
-        
+        } 
     }
 
+    
+    
 }
