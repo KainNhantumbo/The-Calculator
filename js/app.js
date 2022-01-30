@@ -3,19 +3,28 @@ import { openTabById } from './view/view.js';
 import { closeTab } from './view/view.js';
 import { openClipboard } from './view/view.js';
 import { closeClipboard } from './view/view.js';
+import { clearInputs } from './view/view.js';
 import { calcEqLinear } from './modules/functions.js';
 import { calcEqQuadratica } from './modules/functions.js';
 import { calcPercents } from './modules/functions.js';
 import { calcMedia } from './modules/functions.js';
 
 function initializer () {
+    /* ===================Features====================== */
+    // limpa o conteúdo dos inputs
+    document.getElementById('clear-btn').addEventListener('click', e => clearInputs());
+
+    // fecha a aba de cálculo ativa  e volta para área principal
+    // limpa os imputs  antes de fechar
+    document.getElementById('backBtn').addEventListener('click', e => {closeTab(), clearInputs()});
+
+    /* ===================Modals====================== */
     // abre o modal de clipboard
     document.getElementById('clipboard-btn').addEventListener('click', e => openClipboard());
     // fecha o modal de clipboard
     document.getElementById('close-clipboard').addEventListener('click', e => closeClipboard());
 
-    // fecha a aba de cálculo ativa  e volta para área principal
-    document.getElementById('backBtn').addEventListener('click', e => closeTab());
+    /* ===================Tabs====================== */
 
     // abre a aba de cálculo de média
     document.getElementById('calc-media').addEventListener('click', e => openTabById('algebra-media'));

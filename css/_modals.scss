@@ -42,6 +42,7 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
         flex-direction: column;
         margin: 0 auto;
 
+        user-select: none;
         color: $darker-color;
         background: rgba($white-color, .8);
         backdrop-filter: blur(10px);
@@ -95,6 +96,7 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
             color: $white-color;
             font-weight: 500;
             font-size: .9rem;
+            user-select: none;
             
             &:hover {
                 background-color: rgba($primary-color, .2);

@@ -56,9 +56,7 @@ main {
         border-radius: 10px;
         z-index: 1;
         box-shadow: $box-shadow-config2;
-        
         backdrop-filter: blur(10px);
-        
 
         aside {
             width: 2.1em;
@@ -138,6 +136,7 @@ main {
                 }
 
                 input {
+                    width: 100%;
                     border: none;
                     border-radius: 5px;
                     padding: .5em;
@@ -149,6 +148,28 @@ main {
                     }
                 }
             }
+        }
+
+        #clear-btn {
+            width: 15em;
+            height: 2em;
+            border: none;
+            border-radius: 5px 5px 0 0;
+            background: rgba($white-color, .2);
+            font-size: .9rem;
+            font-weight: 500;
+            color: $darker-color;
+            outline: none;
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 7.5em);
+
+            &:hover {
+                color: $white-color;
+                transition: .3s ease;
+            }
+            
         }
 
         .screens-container {
@@ -164,7 +185,7 @@ main {
                 background: rgba($white-color, .2);
                 border-radius: 0 5px 5px 0;
                 position: absolute;
-                left: 0em;
+                left: 0;
                 top: 0;
                 z-index: 1;
 
@@ -173,6 +194,8 @@ main {
                     transition: .5s ease;
                 }
             }
+
+           
             
             .cards-screen {
                 width: inherit;
@@ -240,8 +263,6 @@ main {
                 display: flex;
                 justify-content: center;
                 padding: 0 2em;
-
-               
             }
         }
     }

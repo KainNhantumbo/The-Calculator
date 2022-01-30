@@ -749,6 +749,10 @@ header svg {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 0 auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   color: #000;
   background: rgba(255, 255, 255, 0.8);
   -webkit-backdrop-filter: blur(10px);
@@ -808,6 +812,10 @@ header svg {
   color: #fff;
   font-weight: 500;
   font-size: .9rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .clipboard-modal .modal-actions button:hover {
@@ -982,6 +990,7 @@ main .app-container .search-container label svg {
 }
 
 main .app-container .search-container label input {
+  width: 100%;
   border: none;
   border-radius: 5px;
   padding: .5em;
@@ -1005,6 +1014,28 @@ main .app-container .search-container label input::placeholder {
   font-weight: 500;
 }
 
+main .app-container #clear-btn {
+  width: 15em;
+  height: 2em;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: .9rem;
+  font-weight: 500;
+  color: #000;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 7.5em);
+}
+
+main .app-container #clear-btn:hover {
+  color: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
 main .app-container .screens-container {
   width: inherit;
   display: -webkit-box;
@@ -1024,7 +1055,7 @@ main .app-container .screens-container #backBtn {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 0 5px 5px 0;
   position: absolute;
-  left: 0em;
+  left: 0;
   top: 0;
   z-index: 1;
 }

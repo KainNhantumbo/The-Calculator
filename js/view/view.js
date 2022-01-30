@@ -2,6 +2,7 @@ export function openTabById (id) {
     const cardsTab = document.querySelector('.cards-screen');
     const viewContainer = document.querySelector('.view-screen');
     const backBtn = document.getElementById('backBtn');
+    const clearBtn = document.getElementById('clear-btn');
     const tab = document.getElementById(id);
 
     cardsTab.classList.add('closeCardsAnimation');
@@ -10,6 +11,7 @@ export function openTabById (id) {
         cardsTab.setAttribute('style', 'display: none;');
         viewContainer.removeAttribute('style');
         backBtn.removeAttribute('style');
+        clearBtn.removeAttribute('style');
         tab.removeAttribute('style');
         tab.classList.add('openTabAnimation');
     }, 300);
@@ -20,10 +22,12 @@ export function closeTab () {
     const tabs = document.querySelectorAll('.modal-container');
     const viewContainer = document.querySelector('.view-screen');
     const backBtn = document.getElementById('backBtn');
+    const clearBtn = document.getElementById('clear-btn');
     
     viewContainer.classList.add('closeTabAnimation');
     setTimeout(() => {
         backBtn.setAttribute('style', 'display: none;');
+        clearBtn.setAttribute('style', 'display: none;');
         tabs.forEach(tab => tab.setAttribute('style', 'display: none;'));
         viewContainer.classList.remove('closeTabAnimation');
         viewContainer.setAttribute('style', 'display: none;');
@@ -48,4 +52,10 @@ export function closeClipboard () {
 
     clipboard.setAttribute('style', 'display: none;');
     container.setAttribute('style', 'display: none;');
+}
+
+// limpa o conteúdo dos inputs
+export function clearInputs () {
+    const inputs = document.querySelectorAll('.input-element');
+    inputs.forEach(input => input.value = "");
 }
