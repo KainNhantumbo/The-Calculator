@@ -1154,7 +1154,55 @@ main .app-container .screens-container .cards-screen .cards-container .card span
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  text-align: center;
+}
+
+main .app-container .screens-container .cards-screen_list {
+  width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 2em 0;
+}
+
+main .app-container .screens-container .cards-screen_list .cards-container {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 15em;
+}
+
+main .app-container .screens-container .cards-screen_list .cards-container .card {
+  width: inherit;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 0;
+  position: relative;
+}
+
+main .app-container .screens-container .cards-screen_list .cards-container .card div {
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  margin: 0;
+  position: absolute;
+  left: -.5em;
+  top: -.7em;
+}
+
+main .app-container .screens-container .cards-screen_list .cards-container .card span {
+  text-align: start;
+  margin-left: 4em;
 }
 
 main .app-container .screens-container .view-screen {

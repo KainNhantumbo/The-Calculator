@@ -4,6 +4,7 @@ import { closeTab } from './view/view.js';
 import { openClipboard } from './view/view.js';
 import { closeClipboard } from './view/view.js';
 import { clearInputs } from './view/view.js';
+import { cardsView} from './view/view.js';
 import { calcEqLinear } from './modules/functions.js';
 import { calcEqQuadratica } from './modules/functions.js';
 import { calcPercents } from './modules/functions.js';
@@ -13,6 +14,9 @@ function initializer () {
     /* ===================Features====================== */
     // limpa o conteúdo dos inputs
     document.getElementById('clear-btn').addEventListener('click', e => clearInputs());
+
+    // muda a vista dos cartões de grid para lista e vice-versa 
+    document.getElementById('toggleViewBtn').addEventListener('click', e => cardsView());
 
     // fecha a aba de cálculo ativa  e volta para área principal
     // limpa os imputs  antes de fechar

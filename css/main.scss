@@ -194,8 +194,6 @@ main {
                     transition: .5s ease;
                 }
             }
-
-           
             
             .cards-screen {
                 width: inherit;
@@ -251,7 +249,43 @@ main {
                             text-align: center;
                             color: $white-color;
                             user-select: none;
-                            text-align: center;
+                        }
+                        
+                    }
+                }
+            }
+
+            .cards-screen_list {
+                width: inherit;
+                display: flex;
+                justify-content: space-around;
+                gap: 2em 0;
+    
+                .cards-container {
+                    justify-content: space-evenly;
+                    flex-direction: row;
+                    width: 15em;
+                    
+                    .card {
+                        width: inherit;
+                        justify-content: flex-start;
+                        flex-direction: row;
+                        gap: 0;
+                        position: relative;
+    
+                        div {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 20%;
+                            margin: 0;
+                            position: absolute;
+                            left: -.5em;
+                            top: -.7em;
+                        }
+        
+                        span {
+                            text-align: start;
+                            margin-left: 4em;
                         }
                         
                     }

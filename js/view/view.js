@@ -59,3 +59,9 @@ export function clearInputs () {
     const inputs = document.querySelectorAll('.input-element');
     inputs.forEach(input => input.value = "");
 }
+
+// muda a vista dos cartões de grid para lista e vice-versa 
+export function cardsView () {
+    const toggleView = document.getElementById('cards-view');
+    toggleView.classList.toggle('cards-screen_list');
+}
