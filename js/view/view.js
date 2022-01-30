@@ -32,14 +32,20 @@ export function closeTab () {
     }, 300);
 }
 
-export function modal () {
-    document.querySelector('.container-modal').addEventListener('click', e => {
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        e.cancelBubble = true;
-        console.log(e.bubbles)
-        console.log('Clicoou')
-    })
+// abre o modal de clipboard
+export function openClipboard () {
+    const container = document.querySelector('.container-modal');
+    const clipboard = document.querySelector('.clipboard-modal');
+
+    container.removeAttribute('style');
+    clipboard.removeAttribute('style');
 }
 
-   
+// fecha o modal de clipboard
+export function closeClipboard () {
+    const container = document.querySelector('.container-modal');
+    const clipboard = document.querySelector('.clipboard-modal');
+
+    clipboard.setAttribute('style', 'display: none;');
+    container.setAttribute('style', 'display: none;');
+}
