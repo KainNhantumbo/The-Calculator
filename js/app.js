@@ -1,4 +1,5 @@
 'use strict';
+import './modules/base-calculator.js';
 import { openTabById } from './view/view.js';
 import { closeTab } from './view/view.js';
 import { openClipboard } from './view/view.js';
@@ -29,6 +30,10 @@ function initializer () {
     document.getElementById('close-clipboard').addEventListener('click', e => closeClipboard());
 
     /* ===================Tabs====================== */
+
+    // abre a aba da calculadora
+    document.getElementById('calculator').addEventListener('click', e => openTabById('calculator-tab'));
+    
 
     // abre a aba de cálculo de média
     document.getElementById('calc-media').addEventListener('click', e => openTabById('algebra-media'));

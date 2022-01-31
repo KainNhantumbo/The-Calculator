@@ -196,11 +196,15 @@ main {
             }
             
             .cards-screen {
-                width: inherit;
+                width: inherit;/* 
                 display: flex;
                 justify-content: flex-start;
-                gap: 2em;
-                flex-flow: row wrap;
+                gap: 2em; */
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                justify-items: center;
+                grid-auto-flow:row;
                 padding: 0 2em;
     
                 .cards-container {
@@ -257,9 +261,15 @@ main {
 
             .cards-screen_list {
                 width: inherit;
-                display: flex;
-                justify-content: space-around;
-                gap: 2em 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(4, 1fr);
+                justify-items: center;
+
+                @media screen and (max-width: 920px) {
+                    grid-template-columns: 1fr;
+                }
+                
     
                 .cards-container {
                     justify-content: space-evenly;

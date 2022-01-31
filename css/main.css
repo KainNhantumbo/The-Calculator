@@ -695,6 +695,87 @@ header svg {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.modal-container .base-calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modal-container .base-calculator .output {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 13.3em;
+  height: 2.5em;
+  line-height: 2rem;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding: .5em;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: white;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+
+.modal-container .base-calculator .calculator-btns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (5em)[4];
+      grid-template-columns: repeat(4, 5em);
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+  width: 100%;
+  border-radius: 5em;
+}
+
+.modal-container .base-calculator .calculator-btns button {
+  border: none;
+  padding: .7em 1em;
+  background: rgba(171, 147, 201, 0.2);
+  font-weight: 500;
+  color: #000;
+}
+
+.modal-container .base-calculator .calculator-btns button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.modal-container .base-calculator .calculator-btns #button7, .modal-container .base-calculator .calculator-btns #button8, .modal-container .base-calculator .calculator-btns #button9,
+.modal-container .base-calculator .calculator-btns #button6, .modal-container .base-calculator .calculator-btns #button5, .modal-container .base-calculator .calculator-btns #button4,
+.modal-container .base-calculator .calculator-btns #button3, .modal-container .base-calculator .calculator-btns #button2, .modal-container .base-calculator .calculator-btns #button1,
+.modal-container .base-calculator .calculator-btns #button0 {
+  background: rgba(255, 190, 163, 0.2);
+}
+
+.modal-container .base-calculator .calculator-btns #button7:hover, .modal-container .base-calculator .calculator-btns #button8:hover, .modal-container .base-calculator .calculator-btns #button9:hover,
+.modal-container .base-calculator .calculator-btns #button6:hover, .modal-container .base-calculator .calculator-btns #button5:hover, .modal-container .base-calculator .calculator-btns #button4:hover,
+.modal-container .base-calculator .calculator-btns #button3:hover, .modal-container .base-calculator .calculator-btns #button2:hover, .modal-container .base-calculator .calculator-btns #button1:hover,
+.modal-container .base-calculator .calculator-btns #button0:hover {
+  color: #fff;
+}
+
+.modal-container .base-calculator .calculator-btns #add-operator, .modal-container .base-calculator .calculator-btns #minus-operator,
+.modal-container .base-calculator .calculator-btns #multiply-operator, .modal-container .base-calculator .calculator-btns #divide-operator {
+  color: #fff;
+}
+
+.modal-container .base-calculator .calculator-btns #add-operator:hover, .modal-container .base-calculator .calculator-btns #minus-operator:hover,
+.modal-container .base-calculator .calculator-btns #multiply-operator:hover, .modal-container .base-calculator .calculator-btns #divide-operator:hover {
+  background: rgba(171, 147, 201, 0.7);
+}
+
 .container-modal {
   width: 100vw;
   height: 100vh;
@@ -1068,17 +1149,18 @@ main .app-container .screens-container #backBtn:hover {
 
 main .app-container .screens-container .cards-screen {
   width: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 2em;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  /* 
+                display: flex;
+                justify-content: flex-start;
+                gap: 2em; */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  justify-items: center;
+  grid-auto-flow: row;
   padding: 0 2em;
 }
 
@@ -1158,12 +1240,20 @@ main .app-container .screens-container .cards-screen .cards-container .card span
 
 main .app-container .screens-container .cards-screen_list {
   width: inherit;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  gap: 2em 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+}
+
+@media screen and (max-width: 920px) {
+  main .app-container .screens-container .cards-screen_list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 main .app-container .screens-container .cards-screen_list .cards-container {

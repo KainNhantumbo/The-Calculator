@@ -3,6 +3,7 @@ $secundary-color: #D698B9;
 $warm-color1: #EDA1AB;
 $warm-color2: #FFBEA3;
 $white-color: #fff;
+$darker-color: #000;
 $box-shadow-config: 0 0 5px 2px rgba(#DFDFDF,.5);
 $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
 
@@ -119,6 +120,74 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
             }
         } 
     }
+
+    .base-calculator {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .output {
+            display: flex;
+            justify-content: flex-end;
+            width: 13.3em;
+            height: 2.5em;
+            line-height: 2rem;
+            word-break: break-all;
+            word-wrap: break-word;
+            font-weight: 500;
+            font-size: 1.4rem;
+            padding: .5em;
+            background-color: rgba($darker-color, .2);
+            color: white;
+            overflow:hidden;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .calculator-btns {
+            display: grid;
+            grid-template-columns: repeat(4, 5em);
+            grid-template-rows: repeat(6, 1fr);
+            
+            width: 100%;
+            border-radius: 5em;
+
+
+            button {
+                border: none;
+                padding: .7em 1em;
+                background: rgba($primary-color, .2);
+                font-weight: 500;
+                color: $darker-color;
+
+                &:hover {
+                    background: rgba($white-color, .2);
+                }
+            }
+
+            #button7, #button8, #button9,
+            #button6, #button5, #button4,
+            #button3, #button2, #button1,
+            #button0 {
+                background: rgba($warm-color2, .2);
+
+                &:hover {
+                    color: $white-color;
+                }
+            }
+
+            #add-operator, #minus-operator,
+            #multiply-operator, #divide-operator {
+                color: $white-color;
+                &:hover {
+                    background: rgba($primary-color, .7);
+                }
+            }
+        }
+    }
+
+    
+
+
 
     
     
