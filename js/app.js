@@ -1,5 +1,5 @@
 'use strict';
-import './modules/base-calculator.js';
+
 import { openTabById } from './view/view.js';
 import { closeTab } from './view/view.js';
 import { openClipboard } from './view/view.js';
@@ -10,6 +10,7 @@ import { calcEqLinear } from './modules/functions.js';
 import { calcEqQuadratica } from './modules/functions.js';
 import { calcPercents } from './modules/functions.js';
 import { calcMedia } from './modules/functions.js';
+import { mainCalculator } from './modules/base-calculator.js';
 
 function initializer () {
     /* ===================Features====================== */
@@ -33,6 +34,8 @@ function initializer () {
 
     // abre a aba da calculadora
     document.getElementById('calculator').addEventListener('click', e => openTabById('calculator-tab'));
+
+    mainCalculator()
     
 
     // abre a aba de cálculo de média
