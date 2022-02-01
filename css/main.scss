@@ -112,11 +112,12 @@ main {
         position: absolute;
         top: 5em;
         left: 12.5em;
+
         box-shadow: $box-shadow-config2;
         backdrop-filter: blur(10px);
 
         .search-container {
-            width: 100%;
+            width: 95%;
             display: flex;
             justify-content: center;
             margin: .9rem;
@@ -265,6 +266,7 @@ main {
                 grid-template-columns: repeat(2, 1fr);
                 grid-template-rows: repeat(4, 1fr);
                 justify-items: center;
+                gap: 2em 0;
 
                 @media screen and (max-width: 920px) {
                     grid-template-columns: 1fr;

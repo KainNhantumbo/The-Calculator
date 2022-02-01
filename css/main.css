@@ -764,12 +764,12 @@ header svg {
   color: #fff;
 }
 
-.modal-container .base-calculator .calculator-btns #add-operator, .modal-container .base-calculator .calculator-btns #minus-operator,
+.modal-container .base-calculator .calculator-btns #plus-operator, .modal-container .base-calculator .calculator-btns #minus-operator,
 .modal-container .base-calculator .calculator-btns #multiply-operator, .modal-container .base-calculator .calculator-btns #divide-operator {
   color: #fff;
 }
 
-.modal-container .base-calculator .calculator-btns #add-operator:hover, .modal-container .base-calculator .calculator-btns #minus-operator:hover,
+.modal-container .base-calculator .calculator-btns #plus-operator:hover, .modal-container .base-calculator .calculator-btns #minus-operator:hover,
 .modal-container .base-calculator .calculator-btns #multiply-operator:hover, .modal-container .base-calculator .calculator-btns #divide-operator:hover {
   background: rgba(171, 147, 201, 0.7);
 }
@@ -1043,7 +1043,7 @@ main .app-container {
 }
 
 main .app-container .search-container {
-  width: 100%;
+  width: 95%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1245,6 +1245,7 @@ main .app-container .screens-container .cards-screen_list {
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
   justify-items: center;
+  gap: 2em 0;
 }
 
 @media screen and (max-width: 920px) {
