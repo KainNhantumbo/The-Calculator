@@ -1,5 +1,4 @@
 'use strict';
-
 import { openTabById } from './view/view.js';
 import { closeTab } from './view/view.js';
 import { openClipboard } from './view/view.js';
