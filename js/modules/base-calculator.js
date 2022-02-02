@@ -41,6 +41,7 @@ const operatorsAndOperands = () => {
     const equal = document.getElementById('equal');
     const backspace = document.getElementById('backspace');
     const clearOutput = document.getElementById('clear-output');
+    const clearOutputByBottomBtn = document.getElementById('clear-btn');
 
     // pega todas as teclas (números)
     const operands = document.querySelectorAll('[id*=button]');
@@ -58,5 +59,6 @@ const operatorsAndOperands = () => {
     decimal.addEventListener('click', insertToOutput);
     equal.addEventListener('click', insertToOutput);
     clearOutput.addEventListener('click', outputClear);
-    backspace.addEventListener('click', outputBackspace);
+    clearOutputByBottomBtn.addEventListener('click', outputClear);
+    backspace.addEventListener('keydown', outputBackspace);
 }
