@@ -10,9 +10,14 @@ import { calcEqQuadratica } from './modules/functions.js';
 import { calcPercents } from './modules/functions.js';
 import { calcMedia } from './modules/functions.js';
 import { mainCalculator } from './modules/base-calculator.js';
+import { search } from './modules/searchEngine.js';
 
 function initializer () {
     /* ===================Features====================== */
+    // coloca um evento na input de pesquisa e 
+    // inicia a pesquisa de cartões
+    document.getElementById('search').addEventListener('keyup', search)
+
     // limpa o conteúdo dos inputs
     document.getElementById('clear-btn').addEventListener('click', e => clearInputs());
 
@@ -24,6 +29,7 @@ function initializer () {
     document.getElementById('backBtn').addEventListener('click', e => {closeTab(), clearInputs()});
 
     /* ===================Modals====================== */
+
     // abre o modal de clipboard
     document.getElementById('clipboard-btn').addEventListener('click', e => openClipboard());
     // fecha o modal de clipboard
@@ -34,9 +40,9 @@ function initializer () {
     // abre a aba da calculadora
     document.getElementById('calculator').addEventListener('click', e => openTabById('calculator-tab'));
 
-    mainCalculator()
+    // a funcao calculadora base
+    mainCalculator();
     
-
     // abre a aba de cálculo de média
     document.getElementById('calc-media').addEventListener('click', e => openTabById('algebra-media'));
     // adiciona eventos nos inputs 

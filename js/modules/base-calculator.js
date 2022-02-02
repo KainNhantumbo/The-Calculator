@@ -57,8 +57,16 @@ const operatorsAndOperands = () => {
     mod.addEventListener('click', insertToOutput);
     invert.addEventListener('click', insertToOutput);
     decimal.addEventListener('click', insertToOutput);
+
+    // executa o cálculo
     equal.addEventListener('click', insertToOutput);
+
+    // limpa o output
     clearOutput.addEventListener('click', outputClear);
+    
+    // limpa o output pelo botão 'limpar campos'
     clearOutputByBottomBtn.addEventListener('click', outputClear);
-    backspace.addEventListener('keydown', outputBackspace);
+
+    // elimina o último caractere a direita do output
+    backspace.addEventListener('click', outputBackspace);
 }
