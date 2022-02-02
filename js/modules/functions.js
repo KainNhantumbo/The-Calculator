@@ -120,13 +120,16 @@ export function calcPercents () {
 
 // faz o calculo da média aritmética, geométrica e harmónica
 export function calcMedia () {
-    const a =  document.getElementById('input-mediaA').value;
-    const b =  document.getElementById('input-mediaB').value;
+    const xa =  document.getElementById('input-mediaA').value;
+    const xb =  document.getElementById('input-mediaB').value;
+
+    const a = parseFloat(xa);
+    const b = parseFloat(xb);
 
     if (a && b !== '') {
         // cálculo da média aritmética
         const resultAritmetica =  document.getElementById('result-mediaA');
-        const mediaAritmetica = parseFloat((a + b) / 2);
+        const mediaAritmetica = parseFloat(((a + b) / 2).toFixed(2));
         const resolvedAritmetica = errorHandler(mediaAritmetica);
         resultAritmetica.textContent = resolvedAritmetica;
 
