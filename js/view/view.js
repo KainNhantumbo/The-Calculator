@@ -4,11 +4,14 @@ export function openTabById (id) {
     const backBtn = document.getElementById('backBtn');
     const clearBtn = document.getElementById('clear-btn');
     const searchContainer = document.querySelector('.search-container');
+    const searchLabel = document.getElementById('search-id');
     const tab = document.getElementById(id);
 
     cardsTab.classList.add('closeCardsAnimation');
+    searchLabel.classList.add('searchHide');
     setTimeout(() => {
         cardsTab.classList.remove('closeCardsAnimation');
+        searchLabel.classList.remove('searchHide');
         cardsTab.setAttribute('style', 'display: none;');
         searchContainer.setAttribute('style', 'display: none;');
         viewContainer.removeAttribute('style');
@@ -24,6 +27,7 @@ export function closeTab () {
     const tabs = document.querySelectorAll('.modal-container');
     const viewContainer = document.querySelector('.view-screen');
     const searchContainer = document.querySelector('.search-container');
+    const searchLabel = document.getElementById('search-id');
     const backBtn = document.getElementById('backBtn');
     const clearBtn = document.getElementById('clear-btn');
     
@@ -37,6 +41,7 @@ export function closeTab () {
         searchContainer.removeAttribute('style');
         cardsTab.removeAttribute('style');
         cardsTab.classList.add('openCardsAnimation');
+        searchLabel.classList.add('searchShow');
     }, 300);
 }
 

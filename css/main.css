@@ -528,6 +528,52 @@ header svg {
           animation: closeCards 300ms ease-in forwards;
 }
 
+@-webkit-keyframes searchUp {
+  to {
+    -webkit-transform: translateY(-2em);
+            transform: translateY(-2em);
+  }
+}
+
+@keyframes searchUp {
+  to {
+    -webkit-transform: translateY(-2em);
+            transform: translateY(-2em);
+  }
+}
+
+@-webkit-keyframes searchDown {
+  from {
+    -webkit-transform: translateY(-2em);
+            transform: translateY(-2em);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes searchDown {
+  from {
+    -webkit-transform: translateY(-2em);
+            transform: translateY(-2em);
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+.searchHide {
+  -webkit-animation: searchUp 300ms ease-in forwards;
+          animation: searchUp 300ms ease-in forwards;
+}
+
+.searchShow {
+  -webkit-animation: searchDown 300ms ease-in forwards;
+          animation: searchDown 300ms ease-in forwards;
+}
+
 .modal-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1051,6 +1097,7 @@ main .app-container .search-container {
       -ms-flex-pack: center;
           justify-content: center;
   margin: .9rem;
+  overflow: hidden;
 }
 
 main .app-container .search-container label {

@@ -44,3 +44,27 @@
 }
 
 // ==============================================
+
+@keyframes searchUp {
+    to {
+        transform: translateY(-2em);
+    }
+}
+
+@keyframes searchDown {
+    from {
+        transform: translateY(-2em);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.searchHide {
+    animation: searchUp 300ms ease-in forwards;
+}
+
+.searchShow {
+    animation: searchDown 300ms ease-in forwards;
+}
