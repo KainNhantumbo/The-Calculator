@@ -5,14 +5,7 @@ export const mainCalculator = () => {
     const operandsCache = [];
     operandsCache.push(output.textContent)
     console.log(operandsCache)
-    
-    /* const refreshOutput = (content) => {
-        output.textContent += content;
-    };
-    refreshOutput(); */
     operatorsAndOperands();
-
-    
 }
 
 // coloca os itens no monitor
@@ -25,6 +18,15 @@ const insertToOutput = (e) => {
 const outputClear = () => {
     const output = document.getElementById('output');
     return output.textContent = '';
+};
+
+// deleta apenas um caractere do display (backspace)
+const outputBackspace = () => {
+    const output = document.getElementById('output');
+    let outputData = output.textContent;
+    let tempArray = outputData.slice(0, outputData.length - 1)
+    outputData = '';
+    return output.textContent = tempArray;
 };
 
 // coloca eventos nos operadores e insere no monitor
@@ -56,5 +58,5 @@ const operatorsAndOperands = () => {
     decimal.addEventListener('click', insertToOutput);
     equal.addEventListener('click', insertToOutput);
     clearOutput.addEventListener('click', outputClear);
-    backspace.addEventListener('click', insertToOutput);
+    backspace.addEventListener('click', outputBackspace);
 }
