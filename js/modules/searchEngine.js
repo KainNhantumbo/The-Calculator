@@ -1,14 +1,34 @@
-export const search = async () => {
-    const cards = document.querySelectorAll('#item-title');
+export const search = () => {
+    const cards = document.querySelectorAll('#item-title')
+    const keywords = document.getElementById('search').value;
+    const cardTitles = new Array();
 
-    function findIn (card) {
-        const keywords = document.getElementById('search').value;
-        const titles = card.textContent.trim();
-        
-        if (titles.includes(keywords)) {
-            console.log(titles)
-        }
-    }
+    cards.forEach(card => {
+        const cardTitle = card.textContent.trim();
+        cardTitles.push(cardTitle);
+        /* const darto = cardTitles.match(keywords);
+        console.log(darto[2]) */
 
-    cards.forEach(card => findIn(card));
+    });
+    
+    console.log(cardTitles)
+
+    
+
+
+    
 }
+/* 
+function collectData (card) {
+    
+    const cardTitles = card.textContent.trim();
+    const darto = cardTitles;
+
+    console.log(cardTitles)
+
+    let arrayCard = [];
+    arrayCard.push(cardTitles);
+    return arrayCard;
+    
+    
+} */

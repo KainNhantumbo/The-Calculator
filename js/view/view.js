@@ -3,12 +3,14 @@ export function openTabById (id) {
     const viewContainer = document.querySelector('.view-screen');
     const backBtn = document.getElementById('backBtn');
     const clearBtn = document.getElementById('clear-btn');
+    const searchContainer = document.querySelector('.search-container');
     const tab = document.getElementById(id);
 
     cardsTab.classList.add('closeCardsAnimation');
     setTimeout(() => {
         cardsTab.classList.remove('closeCardsAnimation');
         cardsTab.setAttribute('style', 'display: none;');
+        searchContainer.setAttribute('style', 'display: none;');
         viewContainer.removeAttribute('style');
         backBtn.removeAttribute('style');
         clearBtn.removeAttribute('style');
@@ -21,6 +23,7 @@ export function closeTab () {
     const cardsTab = document.querySelector('.cards-screen');
     const tabs = document.querySelectorAll('.modal-container');
     const viewContainer = document.querySelector('.view-screen');
+    const searchContainer = document.querySelector('.search-container');
     const backBtn = document.getElementById('backBtn');
     const clearBtn = document.getElementById('clear-btn');
     
@@ -31,6 +34,7 @@ export function closeTab () {
         tabs.forEach(tab => tab.setAttribute('style', 'display: none;'));
         viewContainer.classList.remove('closeTabAnimation');
         viewContainer.setAttribute('style', 'display: none;');
+        searchContainer.removeAttribute('style');
         cardsTab.removeAttribute('style');
         cardsTab.classList.add('openCardsAnimation');
     }, 300);

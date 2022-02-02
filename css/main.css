@@ -1135,7 +1135,7 @@ main .app-container .screens-container #backBtn {
   border-radius: 0 5px 5px 0;
   position: absolute;
   left: 0;
-  top: 0;
+  top: 2em;
   z-index: 1;
 }
 
@@ -1303,5 +1303,6 @@ main .app-container .screens-container .view-screen {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 2em;
+  margin-top: 2em;
 }
 /*# sourceMappingURL=main.css.map */
