@@ -49,7 +49,6 @@ export async function calcEqQuadratica () {
         let b = await document.getElementById('input-b2').value;
         let c = await document.getElementById('input-c2').value;
         let result = document.getElementById('result-2');
-        console.log('swdefsdf')
 
         if (a && b && c !== '') {
             console.log(a, b, c)
@@ -83,9 +82,12 @@ export async function calcEqQuadratica () {
 // faz o calculo de percentagens
 export function calcPercents () {
     const option =  document.getElementById('percents').value;
-    const a = document.getElementById('input-percentA').value;
-    const b = document.getElementById('input-percentB').value;
+    const xa = document.getElementById('input-percentA').value;
+    const xb = document.getElementById('input-percentB').value;
     const result =  document.getElementById('result-percent');
+
+    const a = parseFloat(xa);
+    const b = parseFloat(xb);
 
     if (a && b !== '') {
         if (option === 'desconto') {
@@ -100,10 +102,11 @@ export function calcPercents () {
         else if (option === 'aumentar') {
             const x = (a * b) / 100;
             const resolveX = errorHandler(x);
-            // const y = a + x;
-            // const resolveY = errorHandler(y);
-            return result.textContent= `
-            Valor a aumentar: ${resolveX}`;
+            const y = a + x;
+            const resolveY = errorHandler(y);
+            return result.innerHTML = `
+            Valor a aumentar: ${resolveX}<br>
+            Aumento: ${resolveY}%`;
         }
         else if (option === 'simples') {
             const x = ((a * b) / 100)*100;
