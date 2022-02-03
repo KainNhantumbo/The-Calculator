@@ -80,6 +80,15 @@ function initializer () {
         if (event === 'INPUT')
         return calcEqQuadratica();
     });
+
+    // abre a aba de cálculo de IMC
+    document.getElementById('calc-imc').addEventListener('click', e => {openTabById('health-imc'), closeSearchContainer()});
+    // adiciona eventos nos inputs 
+    document.getElementById('health-imc').addEventListener('keyup', e => {
+        const event = e.target.tagName;
+        if (event === 'INPUT')
+        return calcEqQuadratica();
+    });
 }
 
 window.addEventListener('load', initializer);
