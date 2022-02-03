@@ -43,10 +43,10 @@ const modOperator = () => {
 const signalInverter = () => {
     const output = document.getElementById('output');
 
-    let outputData = parseFloat(output.textContent);
+    let outputData = parseFloat(output.textContent.replace(',', '.'));
     const tempOperands = (outputData) * (-1);
 
-    return output.textContent = tempOperands;
+    return output.textContent = tempOperands.toString().replace('.', ',');
 }
 
 // coloca eventos nos operadores e insere no monitor
