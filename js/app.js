@@ -3,6 +3,8 @@ import { openTabById } from './view/view.js';
 import { closeTab } from './view/view.js';
 import { openClipboard } from './view/view.js';
 import { closeClipboard } from './view/view.js';
+import { openSearchContainer } from './view/view.js';
+import { closeSearchContainer } from './view/view.js';
 import { clearInputs } from './view/view.js';
 import { cardsView} from './view/view.js';
 import { calcEqLinear } from './modules/functions.js';
@@ -26,7 +28,7 @@ function initializer () {
 
     // fecha a aba de cálculo ativa  e volta para área principal
     // limpa os imputs  antes de fechar
-    document.getElementById('backBtn').addEventListener('click', e => {closeTab(), clearInputs()});
+    document.getElementById('backBtn').addEventListener('click', e => {closeTab(), clearInputs(), openSearchContainer()});
 
     /* ===================Modals====================== */
 
@@ -38,13 +40,13 @@ function initializer () {
     /* ===================Tabs====================== */
 
     // abre a aba da calculadora
-    document.getElementById('calculator').addEventListener('click', e => openTabById('calculator-tab'));
+    document.getElementById('calculator').addEventListener('click', e => {openTabById('calculator-tab'), closeSearchContainer()});
 
     // a funcao calculadora base
     mainCalculator();
     
     // abre a aba de cálculo de média
-    document.getElementById('calc-media').addEventListener('click', e => openTabById('algebra-media'));
+    document.getElementById('calc-media').addEventListener('click', e => {openTabById('algebra-media'), closeSearchContainer()});
     // adiciona eventos nos inputs 
     document.getElementById('algebra-media').addEventListener('keyup', e => {
         const event = e.target.tagName;
@@ -53,7 +55,7 @@ function initializer () {
     });
 
     // abre a aba de cálculo de porcentagens
-    document.getElementById('calc-porcentagem').addEventListener('click', e => openTabById('algebra-porcentagem'));
+    document.getElementById('calc-porcentagem').addEventListener('click', e => {openTabById('algebra-porcentagem'), closeSearchContainer()});
     // adiciona eventos nos inputs 
     document.getElementById('algebra-porcentagem').addEventListener('keyup', e => {
         const event = e.target.tagName;
@@ -62,7 +64,7 @@ function initializer () {
     });
 
     // abre a aba de cálculo de equação linear
-    document.getElementById('eq-linear').addEventListener('click', e => openTabById('algebra-linear'));
+    document.getElementById('eq-linear').addEventListener('click', e => {openTabById('algebra-linear'), closeSearchContainer()});
     // adiciona eventos nos inputs 
     document.getElementById('algebra-linear').addEventListener('keyup', e => {
         const event = e.target.tagName;
@@ -71,7 +73,7 @@ function initializer () {
     });
 
     // abre a aba de cálculo de equação quadrática
-    document.getElementById('eq-quadratica').addEventListener('click', e => openTabById('algebra-quadratica'));
+    document.getElementById('eq-quadratica').addEventListener('click', e => {openTabById('algebra-quadratica'), closeSearchContainer()});
     // adiciona eventos nos inputs 
     document.getElementById('algebra-quadratica').addEventListener('keyup', e => {
         const event = e.target.tagName;

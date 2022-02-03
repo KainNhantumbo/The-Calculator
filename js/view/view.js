@@ -3,17 +3,13 @@ export function openTabById (id) {
     const viewContainer = document.querySelector('.view-screen');
     const backBtn = document.getElementById('backBtn');
     const clearBtn = document.getElementById('clear-btn');
-    const searchContainer = document.querySelector('.search-container');
-    const searchLabel = document.getElementById('search-id');
     const tab = document.getElementById(id);
 
     cardsTab.classList.add('closeCardsAnimation');
-    searchLabel.classList.add('searchHide');
+    
     setTimeout(() => {
         cardsTab.classList.remove('closeCardsAnimation');
-        searchLabel.classList.remove('searchHide');
         cardsTab.setAttribute('style', 'display: none;');
-        searchContainer.setAttribute('style', 'display: none;');
         viewContainer.removeAttribute('style');
         backBtn.removeAttribute('style');
         clearBtn.removeAttribute('style');
@@ -26,8 +22,6 @@ export function closeTab () {
     const cardsTab = document.querySelector('.cards-screen');
     const tabs = document.querySelectorAll('.modal-container');
     const viewContainer = document.querySelector('.view-screen');
-    const searchContainer = document.querySelector('.search-container');
-    const searchLabel = document.getElementById('search-id');
     const backBtn = document.getElementById('backBtn');
     const clearBtn = document.getElementById('clear-btn');
     
@@ -38,10 +32,32 @@ export function closeTab () {
         tabs.forEach(tab => tab.setAttribute('style', 'display: none;'));
         viewContainer.classList.remove('closeTabAnimation');
         viewContainer.setAttribute('style', 'display: none;');
-        searchContainer.removeAttribute('style');
         cardsTab.removeAttribute('style');
         cardsTab.classList.add('openCardsAnimation');
+    }, 300);
+}
+
+// abre a barra de pesquisa ao fechar abas de cálculo
+export function openSearchContainer () {
+    const searchContainer = document.querySelector('.search-container');
+    const searchLabel = document.getElementById('search-id');
+
+    setTimeout(() => {
+        searchContainer.removeAttribute('style');
         searchLabel.classList.add('searchShow');
+    }, 300);
+}
+
+// fecha a barra de pesquisa ao abrir abas de cálculo
+export function closeSearchContainer () {
+    const searchContainer = document.querySelector('.search-container');
+    const searchLabel = document.getElementById('search-id');
+
+    searchLabel.classList.add('searchHide');
+
+    setTimeout(() => {
+        searchContainer.setAttribute('style', 'display: none;');
+        searchLabel.classList.remove('searchHide');
     }, 300);
 }
 
