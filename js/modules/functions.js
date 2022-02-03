@@ -149,7 +149,7 @@ export function calcMedia () {
     }
 }
 
-// cálcula o IMC
+// faz o cálculo do IMC
 export function calcIMC () {
     const xaltura = document.getElementById('input-altura').value;
     const xpeso = document.getElementById('input-peso').value;
@@ -165,18 +165,28 @@ export function calcIMC () {
     // faz o cálculo de IMC
     const imcValue = (peso / altura**2).toFixed(2);
 
-    const classification = classify(imcValue);
+    // faz a vrificacao de erros no cálculo
+    // e retorna o valor resolvido
+    const resolvedValue = errorHandler(imcValue);
+
+    // aplica a classificacao de acordo com o valor do IMC
+    const classification = classify(resolvedValue);
+
+    //retorna ao usuário
+    result.innerHTML = `
+    ${classification}<br>
+    Valor do IMC = ${resolvedValue}`;
 
     // cria as mensagens para o monitor
     function classify (imcValue) {
         // mensagens a serem exibidas
         const classification = [
-            'abaixo do peso.',
-            'com peso ideal. Continue assim!',
-            'levente acima do peso.',
-            'com obesidade de grau I.',
-            'com obesidade de grau II.',
-            'com obesidade grau III. Cuidado!'
+            'IMC < 18.5: Abaixo do peso.',
+            'IMC < 25: Peso ideal. Continue assim!',
+            'IMC < 30: Levente acima do peso.',
+            'IMC < 35: Obesidade de grau I.',
+            'IMC <= 40: Obesidade de grau II.',
+            'IMC > 40: Obesidade grau III. Cuidado!'
         ];
 
         // condições em que cada mensagem será exibida.
@@ -187,6 +197,4 @@ export function calcIMC () {
         if (imcValue <= 40) return classification[4];
         if (imcValue > 40) return classification[5];
     }
-
-    console.log(imcValue)
 }
