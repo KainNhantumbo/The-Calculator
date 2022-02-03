@@ -1,4 +1,3 @@
-
 export const mainCalculator = () => {
     const output = document.getElementById('output');
 
@@ -30,13 +29,22 @@ const outputBackspace = () => {
     return output.textContent = tempArray;
 };
 
-// calcula usano o mod operator
+// calcula usando o mod operator
 const modOperator = () => {
-    const mod = document.getElementById('mod-operator');
     const output = document.getElementById('output');
 
     let outputData = parseFloat(output.textContent);
     const tempOperands = (outputData / 100).toExponential(3);
+
+    return output.textContent = tempOperands;
+}
+
+// inverte o sinal dos operandos no output
+const signalInverter = () => {
+    const output = document.getElementById('output');
+
+    let outputData = parseFloat(output.textContent);
+    const tempOperands = (outputData) * (-1);
 
     return output.textContent = tempOperands;
 }
@@ -66,9 +74,13 @@ const operatorsAndOperands = () => {
     minus.addEventListener('click', insertToOutput);
     multiply.addEventListener('click', insertToOutput);
     divide.addEventListener('click', insertToOutput);
-    mod.addEventListener('click', modOperator);
-    invert.addEventListener('click', insertToOutput);
     decimal.addEventListener('click', insertToOutput);
+
+    // usa o operador mod sobre os operandos no output
+    mod.addEventListener('click', modOperator);
+
+    // inverte o sinal dos operandos no output
+    invert.addEventListener('click', signalInverter);
 
     // executa o cálculo
     equal.addEventListener('click', insertToOutput);
