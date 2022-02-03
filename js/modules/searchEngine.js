@@ -14,9 +14,6 @@ export const search = () => {
         
 
     });
-
-    
-
     const truffy = cardTitles.filter(value => {
         
     })
@@ -46,7 +43,6 @@ function showCards () {
         });
     }
 }
-
 
 /* 
 function collectData (card) {

@@ -86,14 +86,15 @@ export function calcPercents () {
     const xb = document.getElementById('input-percentB').value;
     const result =  document.getElementById('result-percent');
 
-    const a = parseFloat(xa);
-    const b = parseFloat(xb);
+    if (xa && xb !== '') {
+        // converte xa e xb para float
+        const a = parseFloat(xa);
+        const b = parseFloat(xb);
 
-    if (a && b !== '') {
         if (option === 'desconto') {
             const x = (a * b) / 100;
             const resolveX = errorHandler(x);
-            const y = Math.abs(a - x);
+            const y = (Math.abs(a - x)).toExponential(2);
             const resolveY = errorHandler(y);
             return result.innerHTML = `
             Valor a descontar: ${resolveX}<br>
@@ -123,10 +124,11 @@ export function calcMedia () {
     const xa =  document.getElementById('input-mediaA').value;
     const xb =  document.getElementById('input-mediaB').value;
 
-    const a = parseFloat(xa);
-    const b = parseFloat(xb);
+    if (xa && xb !== '') {
+        // converte xa e xb para float
+        const a = parseFloat(xa);
+        const b = parseFloat(xb);
 
-    if (a && b !== '') {
         // cálculo da média aritmética
         const resultAritmetica =  document.getElementById('result-mediaA');
         const mediaAritmetica = parseFloat(((a + b) / 2).toFixed(2));

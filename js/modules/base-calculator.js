@@ -23,11 +23,23 @@ const outputClear = () => {
 // deleta apenas um caractere do display (backspace)
 const outputBackspace = () => {
     const output = document.getElementById('output');
+
     let outputData = output.textContent;
-    let tempArray = outputData.slice(0, outputData.length - 1)
+    const tempArray = outputData.slice(0, outputData.length - 1)
     outputData = '';
     return output.textContent = tempArray;
 };
+
+// calcula usano o mod operator
+const modOperator = () => {
+    const mod = document.getElementById('mod-operator');
+    const output = document.getElementById('output');
+
+    let outputData = parseFloat(output.textContent);
+    const tempOperands = (outputData / 100).toExponential(3);
+
+    return output.textContent = tempOperands;
+}
 
 // coloca eventos nos operadores e insere no monitor
 const operatorsAndOperands = () => {
@@ -54,7 +66,7 @@ const operatorsAndOperands = () => {
     minus.addEventListener('click', insertToOutput);
     multiply.addEventListener('click', insertToOutput);
     divide.addEventListener('click', insertToOutput);
-    mod.addEventListener('click', insertToOutput);
+    mod.addEventListener('click', modOperator);
     invert.addEventListener('click', insertToOutput);
     decimal.addEventListener('click', insertToOutput);
 
