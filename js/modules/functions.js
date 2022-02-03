@@ -148,3 +148,45 @@ export function calcMedia () {
         resultHarmonica.textContent = resolvedHarmonica;
     }
 }
+
+// cálcula o IMC
+export function calcIMC () {
+    const xaltura = document.getElementById('input-altura').value;
+    const xpeso = document.getElementById('input-peso').value;
+    const result = document.getElementById('result-imc');
+
+    // se um dos campos estiver vazio, pára a execução
+    if (xaltura == '' || xpeso == '') return;
+
+    // converte xaltura e xpeso para float
+    const altura = parseFloat(xaltura);
+    const peso = parseFloat(xpeso);
+    
+    // faz o cálculo de IMC
+    const imcValue = (peso / altura**2).toFixed(2);
+
+    const classification = classify(imcValue);
+
+    // cria as mensagens para o monitor
+    function classify (imcValue) {
+        // mensagens a serem exibidas
+        const classification = [
+            'abaixo do peso.',
+            'com peso ideal. Continue assim!',
+            'levente acima do peso.',
+            'com obesidade de grau I.',
+            'com obesidade de grau II.',
+            'com obesidade grau III. Cuidado!'
+        ];
+
+        // condições em que cada mensagem será exibida.
+        if (imcValue < 18.5) return classification[0];
+        if (imcValue < 25) return classification[1];
+        if (imcValue < 30) return classification[2];
+        if (imcValue < 35) return classification[3];
+        if (imcValue <= 40) return classification[4];
+        if (imcValue > 40) return classification[5];
+    }
+
+    console.log(imcValue)
+}

@@ -11,6 +11,7 @@ import { calcEqLinear } from './modules/functions.js';
 import { calcEqQuadratica } from './modules/functions.js';
 import { calcPercents } from './modules/functions.js';
 import { calcMedia } from './modules/functions.js';
+import { calcIMC } from './modules/functions.js';
 import { mainCalculator } from './modules/base-calculator.js';
 import { search } from './modules/searchEngine.js';
 
