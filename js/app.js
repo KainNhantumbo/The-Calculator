@@ -87,7 +87,7 @@ function initializer () {
     document.getElementById('health-imc').addEventListener('keyup', e => {
         const event = e.target.tagName;
         if (event === 'INPUT')
-        return calcEqQuadratica();
+        return calcIMC();
     });
 }
 
