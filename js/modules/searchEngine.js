@@ -6,14 +6,12 @@ export const search = () => {
         const searchTerm = keywords.trim().toLowerCase();
         const cardTitle = card.textContent.trim().toLowerCase();
 
-        if (cardTitle.indexOf(searchTerm) != -1) {
-            showCards(card);
-        } 
-        else {
+        if (cardTitle.indexOf(searchTerm) == -1) {
             hideCards(card);
+        } else {
+            showCards(card);
         }
-    })
-    
+    });
 }
 
 // esconde os cartões ao pesquisar

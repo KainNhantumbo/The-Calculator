@@ -995,11 +995,10 @@ main .aside-container {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: 12vh;
-  left: 1em;
+  top: 0;
+  left: 0;
   background: rgba(237, 161, 171, 0.5);
   padding: 1em .5em;
-  border-radius: 10px;
   z-index: 1;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
@@ -1008,7 +1007,8 @@ main .aside-container {
 }
 
 main .aside-container aside {
-  width: 2.1em;
+  width: 2.5em;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
