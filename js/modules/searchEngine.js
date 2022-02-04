@@ -1,60 +1,29 @@
 export const search = () => {
-    const cards = document.querySelectorAll('#item-title')
     const keywords = document.getElementById('search').value;
     const cardsContainer = document.querySelectorAll('.cards-container');
-    const cardTitles = new Array();
 
-    cards.forEach(card => {
-        const cardTitle = card.textContent.trim();
-        cardTitles.push(cardTitle);
-        /* const darto = cardTitles.match(keywords);
-        console.log(darto[2]) */
-        hideCards()
-        showCards()
-        
+    cardsContainer.forEach(card => {
+        const searchTerm = keywords.trim().toLowerCase();
+        const cardTitle = card.textContent.trim().toLowerCase();
 
-    });
-    const truffy = cardTitles.filter(value => {
-        
+        if (cardTitle.indexOf(searchTerm) != -1) {
+            showCards(card);
+        } 
+        else {
+            hideCards(card);
+        }
     })
-
-    console.log(truffy)
-    
-    console.log(cardTitles)
-
-    
-
-
     
 }
 
 // esconde os cartões ao pesquisar
-function hideCards () {
-    cardsContainer.forEach(card => {
-        card.setAttribute('style', 'visibility: hidden;');
-    });
+function hideCards (card) {
+    card.setAttribute('style', 'display: none;');
 }
 
 // revela os cartões após a perquisa
-function showCards () {
-    if (keywords === '') {
-        cardsContainer.forEach(card => {
-            card.removeAttribute('style');
-        });
-    }
+function showCards (card) {
+    const keywords = document.getElementById('search').value;
+
+    if (keywords == '') return card.removeAttribute('style');
 }
-
-/* 
-function collectData (card) {
-    
-    const cardTitles = card.textContent.trim();
-    const darto = cardTitles;
-
-    console.log(cardTitles)
-
-    let arrayCard = [];
-    arrayCard.push(cardTitles);
-    return arrayCard;
-    
-    
-} */
