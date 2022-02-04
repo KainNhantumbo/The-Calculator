@@ -98,6 +98,15 @@ main {
                     fill: $white-color;
                 }
             }
+
+            #menu-btn {
+                margin-bottom: .5em;
+                border: 2px solid rgba($white-color, .2);
+
+                &:hover {
+                    background-color: rgba($primary-color, .5);
+                }
+            }
         }
     }
     
