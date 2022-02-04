@@ -1112,16 +1112,15 @@ main .app-container {
 }
 
 main .app-container .search-container {
-  width: 95%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: .9em;
+  margin: .9em auto;
   margin-bottom: 1.2em;
-  overflow: hidden;
 }
 
 main .app-container .search-container label {
@@ -1145,7 +1144,7 @@ main .app-container .search-container label input {
   border-radius: 5px;
   padding: .5em;
   outline: none;
-  margin-left: 2em;
+  padding-left: 2.2em;
 }
 
 main .app-container .search-container label input::-webkit-input-placeholder {

@@ -119,12 +119,11 @@ main {
         backdrop-filter: blur(10px);
 
         .search-container {
-            width: 95%;
+            width: 100%;
             display: flex;
             justify-content: center;
-            margin: .9em;
+            margin: .9em auto;
             margin-bottom: 1.2em;
-            overflow: hidden;
             
 
             label {
@@ -147,7 +146,7 @@ main {
                     border-radius: 5px;
                     padding: .5em;
                     outline: none;
-                    margin-left: 2em;
+                    padding-left: 2.2em;
 
                     &::placeholder {
                         font-weight: 500;
