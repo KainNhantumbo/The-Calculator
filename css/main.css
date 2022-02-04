@@ -425,7 +425,7 @@ header {
 header .title {
   color: #fff;
   font-weight: 500;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   padding: .9em;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -442,6 +442,25 @@ header svg {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
+}
+
+@media screen and (max-width: 590px) {
+  header .title {
+    font-size: .9rem;
+  }
+  header svg {
+    width: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header .title {
+    font-size: .8rem;
+    padding: .7em;
+  }
+  header svg {
+    width: 12px;
+  }
 }
 
 @-webkit-keyframes openTab {
@@ -1073,6 +1092,9 @@ main .app-container {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1081,7 +1103,8 @@ main .app-container {
   border-radius: 10px;
   position: absolute;
   top: 5em;
-  left: 12.5em;
+  left: calc(50vw - 35vw);
+  margin: 0 auto;
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(10px);

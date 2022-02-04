@@ -22,7 +22,7 @@ header {
     .title {
         color: $white-color;
         font-weight: 500;
-        font-size: 1.2em;
+        font-size: 1.2rem;
         padding: .9em;
         letter-spacing: 2px;
         text-transform: uppercase;
@@ -34,6 +34,27 @@ header {
         fill: $white-color;
         width: 20px;
         order: -1;
+    }
+
+    @media screen and (max-width: 590px) {
+        .title {
+            font-size: .9rem;
+        }
+
+        svg {
+            width: 15px;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .title {
+            font-size: .8rem;
+            padding: .7em;
+        }
+
+        svg {
+            width: 12px;
+        }
     }
 }
 
