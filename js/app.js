@@ -3,6 +3,8 @@ import { openTabById } from './view/view.js';
 import { closeTab } from './view/view.js';
 import { openClipboard } from './view/view.js';
 import { closeClipboard } from './view/view.js';
+import { openThemes } from './view/view.js';
+import { closeThemes } from './view/view.js';
 import { openSearchContainer } from './view/view.js';
 import { closeSearchContainer } from './view/view.js';
 import { clearInputs } from './view/view.js';
@@ -37,6 +39,11 @@ function initializer () {
     document.getElementById('clipboard-btn').addEventListener('click', e => openClipboard());
     // fecha o modal de clipboard
     document.getElementById('close-clipboard').addEventListener('click', e => closeClipboard());
+
+    // abre o modal de temas
+    document.getElementById('themes-btn').addEventListener('click', e => openThemes());
+    // fecha o modal de temas
+    document.getElementById('close-themes').addEventListener('click', e => closeThemes());
 
     /* ===================Tabs====================== */
 

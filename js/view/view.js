@@ -79,6 +79,24 @@ export function closeClipboard () {
     container.setAttribute('style', 'display: none;');
 }
 
+// abre o modal de temas
+export function openThemes () {
+    const container = document.querySelector('.container-modal');
+    const themes = document.querySelector('.themes-modal');
+
+    container.removeAttribute('style');
+    themes.removeAttribute('style');
+}
+
+// fecha o modal de temas
+export function closeThemes () {
+    const container = document.querySelector('.container-modal');
+    const themes = document.querySelector('.themes-modal');
+
+    themes.setAttribute('style', 'display: none;');
+    container.setAttribute('style', 'display: none;');
+}
+
 // limpa o conteúdo dos inputs
 export function clearInputs () {
     const inputs = document.querySelectorAll('.input-element');
