@@ -7,6 +7,41 @@ $darker-color: #000;
 $box-shadow-config: 0 0 5px 2px rgba(#DFDFDF,.5);
 $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
 
+@mixin modalDefinition {
+    width: 70%;
+    max-width: 40em;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    border-radius: 10px;
+    background: rgba(#000,.2);
+    backdrop-filter: blur(10px);
+    box-shadow: $box-shadow-config2;
+    padding: 2em;
+    z-index: 51;
+}
+
+@mixin buttons () {
+    padding: .5em 1em;
+    border: none;
+    border-radius: 5px;
+    background: rgba($warm-color2, .5);
+    color: $white-color;
+    font-weight: 500;
+    font-size: .9rem;
+    user-select: none;
+    
+    &:hover {
+        background-color: rgba($primary-color, .2);
+        transition: all .2s ease;
+        transform: scale(.95, .95);
+        box-shadow: $box-shadow-config2;
+    }
+}
+
 .container-modal {
     width: 100vw;
     height:100vh;
@@ -17,22 +52,8 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
     z-index: 50;
 }
 
-.clipboard-modal {
-    width: 70%;
-    max-width: 40em;
-    height: 80%;
-
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    
-
-    border-radius: 10px;
-    background: rgba(#000,.2);
-    backdrop-filter: blur(10px);
-    box-shadow: $box-shadow-config2;
-    padding: 2em;
-    z-index: 51;
+.clipboard-modal, .themes-modal {
+    @include modalDefinition();
 
     .modal-info {
         width: 90%;
@@ -89,22 +110,12 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
         gap: .5em;
 
         button {
-            padding: .5em 1em;
-            border: none;
-            border-radius: 5px;
-            background: rgba($warm-color2, .5);
-            color: $white-color;
-            font-weight: 500;
-            font-size: .9rem;
-            user-select: none;
-            
-            &:hover {
-                background-color: rgba($primary-color, .2);
-                transition: all .2s ease;
-                transform: scale(.95, .95);
-                box-shadow: $box-shadow-config2;
-            }
+            @include buttons();
         }
     }
     
+}
+
+#close-themes {
+    @include buttons();
 }

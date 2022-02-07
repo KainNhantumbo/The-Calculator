@@ -855,7 +855,7 @@ header svg {
   z-index: 50;
 }
 
-.clipboard-modal {
+.clipboard-modal, .themes-modal {
   width: 70%;
   max-width: 40em;
   height: 80%;
@@ -879,7 +879,7 @@ header svg {
   z-index: 51;
 }
 
-.clipboard-modal .modal-info {
+.clipboard-modal .modal-info, .themes-modal .modal-info {
   width: 90%;
   height: 25%;
   display: -webkit-box;
@@ -912,12 +912,12 @@ header svg {
   z-index: 52;
 }
 
-.clipboard-modal .modal-info span {
+.clipboard-modal .modal-info span, .themes-modal .modal-info span {
   font-size: 1rem;
   line-height: 1.6rem;
 }
 
-.clipboard-modal .modal-content {
+.clipboard-modal .modal-content, .themes-modal .modal-content {
   width: 95%;
   height: 70%;
   background: rgba(255, 255, 255, 0.5);
@@ -930,15 +930,15 @@ header svg {
   overflow-y: scroll;
 }
 
-.clipboard-modal .modal-content::-webkit-scrollbar {
+.clipboard-modal .modal-content::-webkit-scrollbar, .themes-modal .modal-content::-webkit-scrollbar {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.clipboard-modal .modal-content::-webkit-scrollbar-thumb {
+.clipboard-modal .modal-content::-webkit-scrollbar-thumb, .themes-modal .modal-content::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.clipboard-modal .modal-actions {
+.clipboard-modal .modal-actions, .themes-modal .modal-actions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -948,7 +948,7 @@ header svg {
   gap: .5em;
 }
 
-.clipboard-modal .modal-actions button {
+.clipboard-modal .modal-actions button, .themes-modal .modal-actions button {
   padding: .5em 1em;
   border: none;
   border-radius: 5px;
@@ -962,7 +962,31 @@ header svg {
           user-select: none;
 }
 
-.clipboard-modal .modal-actions button:hover {
+.clipboard-modal .modal-actions button:hover, .themes-modal .modal-actions button:hover {
+  background-color: rgba(171, 147, 201, 0.2);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  -webkit-transform: scale(0.95, 0.95);
+          transform: scale(0.95, 0.95);
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+#close-themes {
+  padding: .5em 1em;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 190, 163, 0.5);
+  color: #fff;
+  font-weight: 500;
+  font-size: .9rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#close-themes:hover {
   background-color: rgba(171, 147, 201, 0.2);
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
