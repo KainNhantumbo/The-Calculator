@@ -972,6 +972,42 @@ header svg {
           box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
+.modal-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2em;
+}
+
+.modal-content label {
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  padding: .5em;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+}
+
+.modal-content label:hover {
+  background-color: rgba(171, 147, 201, 0.9);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  color: #fff;
+}
+
 #close-themes {
   padding: .5em 1em;
   border: none;
@@ -984,6 +1020,8 @@ header svg {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  margin: 0 auto;
+  width: 40%;
 }
 
 #close-themes:hover {

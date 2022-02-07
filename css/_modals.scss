@@ -116,6 +116,36 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
     
 }
 
+
+.modal-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+
+    label {
+        width: 90%;
+        background-color: rgba($white-color, .2);
+        border-radius: 5px;
+        padding: .5em;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: center;
+        
+        font-weight: 500;
+
+        &:hover {
+            background-color: rgba($primary-color, .9);
+            transition: all .2s ease-in-out;
+            color: $white-color;
+        }
+        
+    }
+}
+
 #close-themes {
     @include buttons();
+    margin: 0 auto;
+    width: 40%;
 }
