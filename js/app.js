@@ -14,6 +14,7 @@ import { calcEqQuadratica } from './modules/functions.js';
 import { calcPercents } from './modules/functions.js';
 import { calcMedia } from './modules/functions.js';
 import { calcIMC } from './modules/functions.js';
+import { calcDeclive } from './modules/functions.js';
 import { mainCalculator } from './modules/base-calculator.js';
 import { search } from './modules/searchEngine.js';
 
@@ -68,7 +69,7 @@ function initializer () {
     document.getElementById('algebra-declive').addEventListener('keyup', e => {
         const event = e.target.tagName;
         if (event === 'INPUT')
-        return calcMedia();
+        return calcDeclive();
     });
 
     // abre a aba de cálculo de porcentagens

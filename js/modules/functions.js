@@ -131,19 +131,19 @@ export function calcMedia () {
 
         // cálculo da média aritmética
         const resultAritmetica =  document.getElementById('result-mediaA');
-        const mediaAritmetica = parseFloat(((a + b) / 2).toFixed(2));
+        const mediaAritmetica = ((a + b) / 2).toFixed(2);
         const resolvedAritmetica = errorHandler(mediaAritmetica);
         resultAritmetica.textContent = resolvedAritmetica;
 
         // cálculo da média geométrica
         const resultGeometrica =  document.getElementById('result-mediaB');
-        const mediaGeometrica = parseFloat((Math.sqrt(a * b)).toFixed(2));
+        const mediaGeometrica = (Math.sqrt(a * b)).toFixed(2);
         const resolvedGeometrica = errorHandler(mediaGeometrica);
         resultGeometrica.textContent = resolvedGeometrica;
 
         // cálculo da média harmónica
         const resultHarmonica =  document.getElementById('result-mediaC');
-        const mediaHarmonica = parseFloat((2 / ((1/a) + (1/b))).toFixed(2));
+        const mediaHarmonica = (2 / ((1/a) + (1/b)).toFixed(2));
         const resolvedHarmonica = errorHandler(mediaHarmonica);
         resultHarmonica.textContent = resolvedHarmonica;
     }
@@ -199,6 +199,23 @@ export function calcIMC () {
     }
 }
 
-function calcDeclive () {
-    
+// faz o calculo de declive de linha
+export function calcDeclive () {
+    const xy1 = document.getElementById('input-y1').value;
+    const xy2 = document.getElementById('input-y2').value;
+    const xx1 = document.getElementById('input-x1').value;
+    const xx2 = document.getElementById('input-x2').value;
+    const result = document.getElementById('result-declive');
+
+    if (xy1 === '' || xy2 === '') return;
+    if (xx1 === '' || xx2 === '') return;
+
+    const y1 = parseFloat(xy1);
+    const y2 = parseFloat(xy2);
+    const x1 = parseFloat(xx1);
+    const x2 = parseFloat(xx2);
+
+    const m = ((y2 -y1) / (x2 -x1)).toExponential(4)
+    const resolvedValue = errorHandler(m);
+    result.textContent = `m = ${resolvedValue}`;
 }
