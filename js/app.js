@@ -62,6 +62,15 @@ function initializer () {
         return calcMedia();
     });
 
+    // abre a aba de cálculo de declive
+    document.getElementById('calc-declive').addEventListener('click', e => {openTabById('algebra-declive'), closeSearchContainer()});
+    // adiciona eventos nos inputs 
+    document.getElementById('algebra-declive').addEventListener('keyup', e => {
+        const event = e.target.tagName;
+        if (event === 'INPUT')
+        return calcMedia();
+    });
+
     // abre a aba de cálculo de porcentagens
     document.getElementById('calc-porcentagem').addEventListener('click', e => {openTabById('algebra-porcentagem'), closeSearchContainer()});
     // adiciona eventos nos inputs 
