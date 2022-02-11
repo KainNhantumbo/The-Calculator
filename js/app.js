@@ -15,7 +15,7 @@ import { calcPercents } from './modules/functions.js';
 import { calcMedia } from './modules/functions.js';
 import { calcIMC } from './modules/functions.js';
 import { calcDeclive } from './modules/functions.js';
-import { mainCalculator } from './modules/base-calculator.js';
+import { calculator } from './modules/base-calculator.js';
 import { search } from './modules/searchEngine.js';
 
 function initializer () {
@@ -50,9 +50,8 @@ function initializer () {
 
     // abre a aba da calculadora
     document.getElementById('calculator').addEventListener('click', e => {openTabById('calculator-tab'), closeSearchContainer()});
-
     // a funcao calculadora base
-    mainCalculator();
+    calculator();
     
     // abre a aba de cálculo de média
     document.getElementById('calc-media').addEventListener('click', e => {openTabById('algebra-media'), closeSearchContainer()});

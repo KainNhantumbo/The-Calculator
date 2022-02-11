@@ -1,10 +1,7 @@
 export const mainCalculator = () => {
     const output = document.getElementById('output');
 
-    const operandsCache = [];
-    operandsCache.push(output.textContent)
-    console.log(operandsCache)
-    operatorsAndOperands();
+    
 }
 
 // coloca os itens no monitor
@@ -49,8 +46,18 @@ const signalInverter = () => {
     return output.textContent = tempOperands.toString().replace('.', ',');
 }
 
+// calcula os valores passados no monitor
+const calculate = () => {
+    const output = document.getElementById('output');
+    let operandsCache = [];
+
+    operandsCache = output.textContent;
+    
+    console.log(operandsCache)
+}
+
 // coloca eventos nos operadores e insere no monitor
-const operatorsAndOperands = () => {
+export const calculator = () => {
     const plus = document.getElementById('plus-operator');
     const multiply = document.getElementById('multiply-operator');
     const minus = document.getElementById('minus-operator');
@@ -83,7 +90,7 @@ const operatorsAndOperands = () => {
     invert.addEventListener('click', signalInverter);
 
     // executa o cálculo
-    equal.addEventListener('click', insertToOutput);
+    equal.addEventListener('click', calculate);
 
     // limpa o output
     clearOutput.addEventListener('click', outputClear);

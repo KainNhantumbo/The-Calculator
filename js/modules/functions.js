@@ -201,21 +201,27 @@ export function calcIMC () {
 
 // faz o calculo de declive de linha
 export function calcDeclive () {
+    // variaveis dos inputs
     const xy1 = document.getElementById('input-y1').value;
     const xy2 = document.getElementById('input-y2').value;
     const xx1 = document.getElementById('input-x1').value;
     const xx2 = document.getElementById('input-x2').value;
     const result = document.getElementById('result-declive');
 
+    // verifica se as variaveis tem valores
     if (xy1 === '' || xy2 === '') return;
     if (xx1 === '' || xx2 === '') return;
 
+    // converte os valores das variaveis para float
     const y1 = parseFloat(xy1);
     const y2 = parseFloat(xy2);
     const x1 = parseFloat(xx1);
     const x2 = parseFloat(xx2);
 
-    const m = ((y2 -y1) / (x2 -x1)).toExponential(4)
+    // faz o calculo do declive de linha
+    const m = ((y2 -y1) / (x2 -x1)).toExponential(4);
     const resolvedValue = errorHandler(m);
+
+    // entrega o valor resolvido para o usuario
     result.textContent = `m = ${resolvedValue}`;
 }
