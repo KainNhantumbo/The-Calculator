@@ -198,3 +198,7 @@ export function calcIMC () {
         if (imcValue > 40) return classification[5];
     }
 }
+
+function calcDeclive () {
+    
+}
