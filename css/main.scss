@@ -4,15 +4,6 @@
 @import './animations';
 @import './tabs';
 @import './modals';
-@import './footer';
-
-$primary-color: #AB93C9;
-$secundary-color: #D698B9;
-$warm-color1: #EDA1AB;
-$warm-color2: #FFBEA3;
-$white-color: #fff;
-$box-shadow-config: 0 0 5px 2px rgba(#DFDFDF,.5);
-$box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
 
 body {
     box-sizing: border-box;
@@ -23,7 +14,6 @@ body {
     background: url('../images/img-backgound3.jpg') no-repeat;
     background-size: cover;
     overflow: hidden;
-   
 }
 
 ::-webkit-scrollbar {

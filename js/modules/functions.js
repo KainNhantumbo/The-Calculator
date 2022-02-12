@@ -227,5 +227,17 @@ export function calcDeclive () {
 }
 
 export function calcPitagorasTeorem () {
-    
+    const xcatetoA = document.getElementById('input-catetoA').value;
+    const xcatetoB = document.getElementById('input-catetoB').value;
+    const result = document.getElementById('result-hipotenusa');
+
+    if (xcatetoA === '' || xcatetoB === '') return
+
+    const a = parseFloat(xcatetoA);
+    const b = parseFloat(xcatetoB);
+
+    const c = (Math.sqrt((Math.pow(a, 2) + Math.pow(b, 2)))).toExponential(2);
+    const resolvedValue = errorHandler(c);
+
+    result.textContent = `c = ${resolvedValue}`
 }
