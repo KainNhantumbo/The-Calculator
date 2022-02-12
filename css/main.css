@@ -1139,10 +1139,9 @@ main .aside-container aside div span {
           user-select: none;
 }
 
-main .aside-container aside div svg {
+main .aside-container aside div .svgs {
   position: absolute;
   width: 18px;
-  fill: #fff;
 }
 
 main .aside-container aside #menu-btn {

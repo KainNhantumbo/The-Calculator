@@ -52,6 +52,14 @@ const calculate = () => {
     let operandsCache = [];
 
     operandsCache = output.textContent;
+
+    // if (operandsCache.indexOf('+') === true) {
+    //     operandsCache.split()
+    // }
+    // const verifyOperand;
+    // let result;
+
+    // return output.textContent = result;
     
     console.log(operandsCache)
 }
