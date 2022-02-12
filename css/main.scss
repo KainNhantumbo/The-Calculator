@@ -141,7 +141,7 @@ main {
                 opacity: .5;
                 position: relative;
 
-                svg {
+                .svg-search {
                     position: absolute;
                     top: .3em;
                     left: .5em;
@@ -268,9 +268,8 @@ main {
                             border-radius: 50%;
                             margin: 0 auto;
         
-                            svg {
+                            .svg-card {
                                 width: 20px;
-                                fill: $primary-color;
                                 margin: 0 auto;
                             } 
                         }

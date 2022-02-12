@@ -436,8 +436,7 @@ header .title {
           user-select: none;
 }
 
-header svg {
-  fill: #fff;
+header .svg-header {
   width: 20px;
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
@@ -1201,7 +1200,7 @@ main .app-container .search-container label {
   position: relative;
 }
 
-main .app-container .search-container label svg {
+main .app-container .search-container label .svg-search {
   position: absolute;
   top: .3em;
   left: .5em;
@@ -1386,9 +1385,8 @@ main .app-container .screens-container .cards-screen .cards-container .card div 
   margin: 0 auto;
 }
 
-main .app-container .screens-container .cards-screen .cards-container .card div svg {
+main .app-container .screens-container .cards-screen .cards-container .card div .svg-card {
   width: 20px;
-  fill: #AB93C9;
   margin: 0 auto;
 }
 
