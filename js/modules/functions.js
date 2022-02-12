@@ -244,5 +244,27 @@ export function calcPitagorasTeorem () {
 }
 
 export function calcDistance () {
-    
+    const xy1 = document.getElementById('input-distanceY1').value;
+    const xy2 = document.getElementById('input-distanceY2').value;
+    const xx1 = document.getElementById('input-distanceX1').value;
+    const xx2 = document.getElementById('input-distanceX2').value;
+    const result = document.getElementById('result-distance');
+
+    // verifica se as variaveis tem valores
+    if (xy1 === '' || xy2 === '') return;
+    if (xx1 === '' || xx2 === '') return;
+
+    // converte os valores das variaveis para float
+    const y1 = parseFloat(xy1);
+    const y2 = parseFloat(xy2);
+    const x1 = parseFloat(xx1);
+    const x2 = parseFloat(xx2);
+
+    const d = (Math.sqrt(
+    (Math.pow(((x2) - (x1)), 2)
+     + Math.pow(((y2) - (y1)), 2)
+    ))).toExponential(2);
+
+    const resolvedValue = errorHandler(d);
+    result.textContent = `d = ${resolvedValue}`;
 }
