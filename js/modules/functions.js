@@ -225,3 +225,7 @@ export function calcDeclive () {
     // entrega o valor resolvido para o usuario
     result.textContent = `m = ${resolvedValue}`;
 }
+
+export function calcPitagorasTeorem () {
+    
+}

@@ -1,20 +1,14 @@
 'use strict';
-import { openTabById } from './view/view.js';
-import { closeTab } from './view/view.js';
-import { openClipboard } from './view/view.js';
-import { closeClipboard } from './view/view.js';
-import { openThemes } from './view/view.js';
-import { closeThemes } from './view/view.js';
+import { openTabById, closeTab } from './view/view.js';
+import { openClipboard, closeClipboard } from './view/view.js';
+import { openThemes, closeThemes } from './view/view.js';
 import { openSearchContainer } from './view/view.js';
 import { closeSearchContainer } from './view/view.js';
-import { clearInputs } from './view/view.js';
-import { cardsView} from './view/view.js';
-import { calcEqLinear } from './modules/functions.js';
-import { calcEqQuadratica } from './modules/functions.js';
+import { clearInputs, cardsView } from './view/view.js';
+import { calcEqLinear, calcEqQuadratica } from './modules/functions.js';
 import { calcPercents } from './modules/functions.js';
-import { calcMedia } from './modules/functions.js';
-import { calcIMC } from './modules/functions.js';
-import { calcDeclive } from './modules/functions.js';
+import { calcMedia, calcIMC } from './modules/functions.js';
+import { calcDeclive, calcPitagorasTeorem } from './modules/functions.js';
 import { calculator } from './modules/base-calculator.js';
 import { search } from './modules/searchEngine.js';
 
@@ -105,6 +99,15 @@ function initializer () {
         const event = e.target.tagName;
         if (event === 'INPUT')
         return calcIMC();
+    });
+
+    // abre a aba de cálculo de Teorema de pitagoras
+    document.getElementById('calc-pitagorasTeorem').addEventListener('click', e => {openTabById('health-imc'), closeSearchContainer()});
+    // adiciona eventos nos inputs 
+    document.getElementById('health-imc').addEventListener('keyup', e => {
+        const event = e.target.tagName;
+        if (event === 'INPUT')
+        return calcPitagorasTeorem();
     });
 }
 
