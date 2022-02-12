@@ -155,6 +155,16 @@
                             </span>
                         </div>
                     </section>
+                    <section class="cards-container" id="calc-distance">
+                        <div class="card">
+                            <div>
+                                <img class="svg-card" src="./svgs/calculator2.svg" alt="svg-calculator2">
+                            </div>
+                            <span id="item-title">
+                                Distancia entre Pontos
+                            </span>
+                        </div>
+                    </section>
                     <section class="cards-container" id="calc-porcentagem">
                         <div class="card">
                             <div>
@@ -256,6 +266,7 @@
                             </section>
                         </section>
                     </div>
+
                     <div class="modal-container" id="algebra-porcentagem" style="display: none;">
                         <div class="top-container">
                             <div class="title">
@@ -449,13 +460,48 @@
                         </div>
                     </div>
 
+                    <div class="modal-container" id="algebra-declive" style="display: none;">
+                        <div class="top-container">
+                            <div class="title">
+                                Calculo de Distancia
+                            </div>
+                            <div class="calc-description">
+                                m = (y2 - y1) / (x2 - x1)
+                            </div>
+                        </div>
+                        <div class="base-container">
+                            <label for="input-y1">
+                                &nbsp; Valor de y1
+                                <input class="input-element" type="number" id="input-y1">
+                            </label>
+                            <label for="input-y2">
+                                &nbsp; Valor de y2
+                                <input class="input-element" type="number" id="input-y2">
+                            </label>
+                            <label for="input-x1">
+                                &nbsp; Valor de x1
+                                <input class="input-element" type="number" id="input-x1">
+                            </label>
+                            <label for="input-x2">
+                                &nbsp; Valor de x2
+                                <input class="input-element" type="number" id="input-x2">
+                            </label>
+                            <label for="result">
+                                &nbsp; Resultado
+                                <div id="result-declive">
+                                    O resultado vai aparecer aqui...
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
                     <div class="modal-container" id="algebra-pitagorasTeorem" style="display: none;">
                         <div class="top-container">
                             <div class="title">
                                 Teorema de Pitagoras
                             </div>
                             <div class="calc-description">
-                                Sintaxe: c<sup>2</sup> = b <sup>2</sup> + a <sup>2</sup>
+                                Sintaxe: c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup>
                             </div>
                         </div>
                         <div class="base-container">
@@ -475,6 +521,7 @@
                             </label>
                         </div>
                     </div>
+
                 </section>
             </section>
         </section>

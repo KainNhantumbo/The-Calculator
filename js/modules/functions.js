@@ -226,6 +226,7 @@ export function calcDeclive () {
     result.textContent = `m = ${resolvedValue}`;
 }
 
+// faz o calculo do teorema de pitagoras
 export function calcPitagorasTeorem () {
     const xcatetoA = document.getElementById('input-catetoA').value;
     const xcatetoB = document.getElementById('input-catetoB').value;
@@ -240,4 +241,8 @@ export function calcPitagorasTeorem () {
     const resolvedValue = errorHandler(c);
 
     result.textContent = `c = ${resolvedValue}`
+}
+
+export function calcDistance () {
+    
 }

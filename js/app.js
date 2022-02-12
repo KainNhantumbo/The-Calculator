@@ -6,7 +6,7 @@ import { openSearchContainer } from './view/view.js';
 import { closeSearchContainer } from './view/view.js';
 import { clearInputs, cardsView } from './view/view.js';
 import { calcEqLinear, calcEqQuadratica } from './modules/functions.js';
-import { calcPercents } from './modules/functions.js';
+import { calcPercents, calcDistance } from './modules/functions.js';
 import { calcMedia, calcIMC } from './modules/functions.js';
 import { calcDeclive, calcPitagorasTeorem } from './modules/functions.js';
 import { calculator } from './modules/base-calculator.js';
@@ -108,6 +108,15 @@ function initializer () {
         const event = e.target.tagName;
         if (event === 'INPUT')
         return calcPitagorasTeorem();
+    });
+
+    // abre a aba de cálculo de Teorema de pitagoras
+    document.getElementById('calc-distance').addEventListener('click', e => {openTabById('algebra-pitagorasTeorem'), closeSearchContainer()});
+    // adiciona eventos nos inputs 
+    document.getElementById('algebra-pitagorasTeorem').addEventListener('keyup', e => {
+        const event = e.target.tagName;
+        if (event === 'INPUT')
+        return calcDistance();
     });
 }
 
