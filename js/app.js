@@ -102,9 +102,9 @@ function initializer () {
     });
 
     // abre a aba de cálculo de Teorema de pitagoras
-    document.getElementById('calc-pitagorasTeorem').addEventListener('click', e => {openTabById('health-imc'), closeSearchContainer()});
+    document.getElementById('calc-pitagorasTeorem').addEventListener('click', e => {openTabById('algebra-pitagorasTeorem'), closeSearchContainer()});
     // adiciona eventos nos inputs 
-    document.getElementById('health-imc').addEventListener('keyup', e => {
+    document.getElementById('algebra-pitagorasTeorem').addEventListener('keyup', e => {
         const event = e.target.tagName;
         if (event === 'INPUT')
         return calcPitagorasTeorem();
