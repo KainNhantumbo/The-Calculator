@@ -110,10 +110,10 @@ function initializer () {
         return calcPitagorasTeorem();
     });
 
-    // abre a aba de cálculo de Teorema de pitagoras
-    document.getElementById('calc-distance').addEventListener('click', e => {openTabById('algebra-pitagorasTeorem'), closeSearchContainer()});
+    // abre a aba de cálculo de Distancia entre Pontos
+    document.getElementById('calc-distance').addEventListener('click', e => {openTabById('algebra-distance'), closeSearchContainer()});
     // adiciona eventos nos inputs 
-    document.getElementById('algebra-pitagorasTeorem').addEventListener('keyup', e => {
+    document.getElementById('algebra-distance').addEventListener('keyup', e => {
         const event = e.target.tagName;
         if (event === 'INPUT')
         return calcDistance();
