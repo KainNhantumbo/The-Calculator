@@ -4,38 +4,32 @@
         transform: translateY(10em);
     }
 }
-
 @keyframes closeTab {
     to {
         transform: scale(.5, .5);
         opacity: 0;
     }
 }
-
 .openTabAnimation {
     animation: openTab 500ms ease-out forwards;
 }
-
 .closeTabAnimation {
     animation: closeTab 300ms ease-in forwards;
 }
 
 // =============================================
-
 @keyframes openCards {
     from {
         transform: scale(.5, .5);
         opacity: 0;
     }
 }
-
 @keyframes closeCards {
     to {
         transform: scale(.5, .5);
         opacity: 0;
     }
 }
-
 .openCardsAnimation {
     animation: openCards 300ms ease-out forwards;
 }
@@ -44,13 +38,11 @@
 }
 
 // ==============================================
-
 @keyframes searchUp {
     to {
         transform: translateY(-2em);
     }
 }
-
 @keyframes searchDown {
     from {
         transform: translateY(-2em);
@@ -60,11 +52,9 @@
         transform: translateY(0);
     }
 }
-
 .searchHide {
     animation: searchUp 300ms ease-in forwards;
 }
-
 .searchShow {
     animation: searchDown 300ms ease-in forwards;
 }

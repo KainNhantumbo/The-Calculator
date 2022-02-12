@@ -9,7 +9,6 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
     font-family: Montserrat;
     background: url('../images/img-backgound3.jpg') no-repeat;
     background-size: cover;
@@ -33,7 +32,6 @@ body {
 
 main {
     position: relative;
-
     .aside-container {
         display: flex;
         justify-content: flex-start;
@@ -61,7 +59,6 @@ main {
                 transition: .3s ease-out;
                 color: $white-color;
             }
-
             div {
                 display: flex;
                 justify-content: flex-start;
@@ -69,29 +66,24 @@ main {
                 padding: .5em;
                 border-radius: 5px;
                 cursor: pointer;
-                
                 &:hover {
                     background-color: #FFBEA3;
                     transition: .2s ease;
                     
                 }
-
                 span {
                     font-weight: 500;
                     margin-left: 2.5em;
                     user-select: none;
                 }
-                
                 .svgs {
                     position: absolute;
                     width: 18px;
                 }
             }
-
             #menu-btn {
                 margin-bottom: .5em;
                 border: 2px solid rgba($white-color, .2);
-
                 &:hover {
                     background-color: rgba($primary-color, .5);
                 }
@@ -123,7 +115,6 @@ main {
             margin: .9em auto;
             margin-bottom: 1.2em;
             
-
             label {
                 width: 80%;
                 background-color: $white-color;
@@ -172,7 +163,6 @@ main {
                 color: $white-color;
                 transition: .3s ease;
             }
-            
         }
 
         .screens-container {
@@ -214,15 +204,12 @@ main {
                 @media screen and (max-width: 1100px) {
                     grid-template-columns: repeat(4, 1fr);
                 }
-
                 @media screen and (max-width: 930px) {
                     grid-template-columns: repeat(3, 1fr);
                 }
-
                 @media screen and (max-width: 730px) {
                     grid-template-columns: repeat(2, 1fr);
                 }
-
                 @media screen and (max-width: 510px) {
                     grid-template-columns: repeat(1, 1fr);
                 }
@@ -263,7 +250,6 @@ main {
                                 margin: 0 auto;
                             } 
                         }
-        
                         span {
                             max-width: 100%;
                             font-weight: 500;
@@ -289,8 +275,7 @@ main {
                 @media screen and (max-width: 920px) {
                     grid-template-columns: 1fr;
                 }
-                
-    
+
                 .cards-container {
                     justify-content: space-evenly;
                     flex-direction: row;
@@ -312,16 +297,13 @@ main {
                             left: -.5em;
                             top: -.7em;
                         }
-        
                         span {
                             text-align: start;
                             margin-left: 4em;
                         }
-                        
                     }
                 }
             }
-
             .view-screen {
                 width: inherit;
                 display: flex;

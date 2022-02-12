@@ -1,17 +1,7 @@
-$primary-color: #AB93C9;
-$secundary-color: #D698B9;
-$warm-color1: #EDA1AB;
-$warm-color2: #FFBEA3;
-$white-color: #fff;
-$darker-color: #000;
-$box-shadow-config: 0 0 5px 2px rgba(#DFDFDF,.5);
-$box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
-
 @mixin modalDefinition {
     width: 70%;
     max-width: 40em;
     height: 80%;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -54,7 +44,6 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
 
 .clipboard-modal, .themes-modal {
     @include modalDefinition();
-
     .modal-info {
         width: 90%;
         height: 25%;
@@ -75,8 +64,7 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
         font-size: 2rem;
         gap: .5em;
         z-index: 52;
-        
-
+    
         span {
             font-size: 1rem;
             line-height: 1.6rem;
@@ -98,7 +86,6 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
         &::-webkit-scrollbar {
             background: rgba($white-color, .1);
         }
-
         &::-webkit-scrollbar-thumb {
             background: rgba($darker-color, .5);
         }
@@ -113,9 +100,7 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
             @include buttons();
         }
     }
-    
 }
-
 
 .modal-content {
     display: flex;
@@ -129,10 +114,8 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
         border-radius: 5px;
         padding: .5em;
         margin: 0 auto;
-
         display: flex;
         justify-content: center;
-        
         font-weight: 500;
 
         &:hover {
@@ -140,7 +123,6 @@ $box-shadow-config2: 0 0 5px 0 rgba(#000,.2);
             transition: all .2s ease-in-out;
             color: $white-color;
         }
-        
     }
 }
 
