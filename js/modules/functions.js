@@ -219,7 +219,7 @@ export function calcDeclive () {
     const x2 = parseFloat(xx2);
 
     // faz o calculo do declive de linha
-    const m = ((y2 -y1) / (x2 -x1)).toExponential(4);
+    const m = ((y2 - y1) / (x2 - x1)).toExponential(4);
     const resolvedValue = errorHandler(m);
 
     // entrega o valor resolvido para o usuario
@@ -232,7 +232,7 @@ export function calcPitagorasTeorem () {
     const xcatetoB = document.getElementById('input-catetoB').value;
     const result = document.getElementById('result-hipotenusa');
 
-    if (xcatetoA === '' || xcatetoB === '') return
+    if (xcatetoA === '' || xcatetoB === '') return;
 
     const a = parseFloat(xcatetoA);
     const b = parseFloat(xcatetoB);
