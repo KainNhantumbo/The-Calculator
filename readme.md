@@ -1,7 +1,7 @@
 # The Calculator
 This is a multifunctions desktop calculator developed with **HTML, SASS and Javascript** for dayly tasks. This projects are still in development, so the full doumentation will be available soon.\
 \
-**Note: you can find this app deployed version at [https://github.com/KainNhantumbo](https://github.com/KainNhantumbo 'See deployed version').**
+**Note: you can find this app deployed version at [https://kainnhantumbo.github.io/The-Calculator](https://kainnhantumbo.github.io/The-Calculator 'See deployed version').**
 
 Here are some of in app screenshots:
 ![](/docs/img/capture00.png)
