@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Kain Nhantumbo">
@@ -7,10 +8,16 @@
     <meta name="description" content="All in one calculator">
     <meta name="keywords" content="calculator, calculadora tudo-em-uma, all-in-one calculator">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet" type="text/css">
     <script src="./js/app.js" type="module" defer></script>
     <title>The Calculator</title>
 </head>
+
 <body>
     <header>
         <div class="title">
@@ -24,7 +31,7 @@
         <section class="container-modal" aria-modal="true" style="display: none;">
             <!-- ----------Clipboard Modal------------ -->
             <section class="clipboard-modal" aria-modal="true" style="display: none;">
-                <div class="modal-info" >
+                <div class="modal-info">
                     Clipboard
                     <span class="modal-description">
                         Escreva anotações temporárias neste painel. <br>
@@ -49,7 +56,7 @@
 
             <!-- ----------Themes Modal------------ -->
             <section class="themes-modal" aria-modal="true" style="display: none;">
-                <div class="modal-info" >
+                <div class="modal-info">
                     Temas
                     <span class="modal-description">
                         Escolha o tema de sua preferência!
@@ -71,7 +78,7 @@
             </section>
 
         </section>
-        
+
         <!-- ----------------Sidebar------------------- -->
         <section class="aside-container">
             <aside>
@@ -131,7 +138,11 @@
             <!-- -----------Screens Container-------------- -->
             <section class="screens-container">
                 <!---------------- back button ----------------->
-                <svg id="backBtn" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>
+                <svg id="backBtn" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
+                    <!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) -->
+                    <path
+                        d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z" />
+                </svg>
 
                 <!-- -----------------Cards----------------- -->
                 <section class="cards-screen" id="cards-view">
@@ -228,7 +239,7 @@
                 </section>
 
 
-<!-- ---------------------Tabs------------------------- -->
+                <!-- ---------------------Tabs------------------------- -->
                 <section class="view-screen" style="display: none;">
 
                     <div class="modal-container" id="calculator-tab" style="display: none;">
@@ -237,7 +248,7 @@
                                 Calculator
                             </div>
                             <div class="calc-description">
-                               Calculadora Básica
+                                Calculadora Básica
                             </div>
                         </div>
                         <section class="base-calculator">
@@ -466,7 +477,8 @@
                                 Calculo de Distancia entre Pontos
                             </div>
                             <div class="calc-description">
-                                d<sup>2</sup> = (x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> - y<sub>1</sub>)<sup>2</sup>
+                                d<sup>2</sup> = (x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> -
+                                y<sub>1</sub>)<sup>2</sup>
                             </div>
                         </div>
                         <div class="base-container">
@@ -527,4 +539,5 @@
         </section>
     </main>
 </body>
+
 </html>
